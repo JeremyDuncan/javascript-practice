@@ -9,8 +9,18 @@ groceryList.push("soda");
 console.log(groceryList);
 
 // 2. Write the code that will add "granola" to the end of array without altering the original array.
+const el = "granola";
+const newArray = [...groceryList, el];
+console.log(newArray);
 
 // 3. Write the code that will return a subset of the array containing only "chips" and "dip".
+var resultArr = [];
+for (var i = 0; i < groceryList.length; ++i) {
+  if (groceryList[i] === "chips" || groceryList[i] === "dip") {
+    resultArr.push(groceryList[i]);
+  }
+}
+console.log(resultArr);
 
 // 4. Write the code that will add "beans" to the "chips" and "dip" array.
 
