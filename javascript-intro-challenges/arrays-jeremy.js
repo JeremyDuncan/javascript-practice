@@ -1,7 +1,7 @@
 // ### Challenges
 // Copy the challenges into your JavaScript file. Comment out the instructions and code the solution to each problem beneath the prompt.
 
-// Consider the variable:
+// === Consider the variable: ===
 var groceryList = ["chips", "dip", "cookies"]
 
 // 1. Write the code that will add "soda" to the end of the original array.
@@ -26,17 +26,24 @@ console.log(resultArr);
 resultArr.push("beans");
 console.log(resultArr);
 
-// Consider the variable:
-// ```javascript
-// var numbers = [2, 4, 6, 8, 10]
-// ```
+//  === Consider the variable: ===
+var numbers = [2, 4, 6, 8, 10]
+
 // 5. Write the code that will add the number 0 to the beginning of the array.
+numbers.unshift(0);
+console.log(numbers);
 
 // 6. Write the code that will add the number 12 to the end of the array.
+numbers.push(12);
+console.log(numbers);
 
 // 7. Write the code that will remove the first number from the array.
+numbers.shift();
+console.log(numbers);
 
 // 8. Write the code that will add the number 0 to the beginning of the array without altering the original array. **HINT**: it's not `.unshift` You'll have to get creative! ;)
+newArr = [0 ,...numbers];
+console.log(newArr);
 
 // Consider the variable:
 // ```javascript
