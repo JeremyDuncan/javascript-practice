@@ -23,6 +23,8 @@ for (var i = 0; i < groceryList.length; ++i) {
 console.log(resultArr);
 
 // 4. Write the code that will add "beans" to the "chips" and "dip" array.
+resultArr.push("beans");
+console.log(resultArr);
 
 // Consider the variable:
 // ```javascript
