@@ -96,13 +96,22 @@ var numSet = [2, 13, 6, 8, 4, 2]
   var combinedCohortMembers = cohortMembers1.concat(cohortMembers2);
   combinedCohortMembers.sort();
   console.log(combinedCohortMembers);
-  
-// Consider the variables:
 
-// ```javascript
-// var numbers = [42, 221, 71, 7, 18, 87]
-// var oddIndexes = []
-// ```
-// 19. Write the code that logs the values from the numbers array that are at odd indexes.
+// Consider the variables: 
+var numbers = [42, 221, 71, 7, 18, 87]
+var oddIndexes = []
 
-// 20. Write the code that adds the values from odd indexes into the oddIndexes array.
+  // 19. Write the code that logs the values from the numbers array that are at odd indexes.
+  for (var i = 0; i < numbers.length; ++i) {
+    if (numbers[i] % 2 != 0) {
+      console.log(numbers[i]);
+    }
+  }
+
+  // 20. Write the code that adds the values from odd indexes into the oddIndexes array.
+  for (var i = 0; i < numbers.length; ++i) {
+    if (numbers[i] % 2 != 0) {
+      oddIndexes.push(numbers[i]);
+    }
+  }
+  console.log(oddIndexes);
