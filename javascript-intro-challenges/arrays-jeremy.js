@@ -42,25 +42,26 @@ numbers.shift();
 console.log(numbers);
 
 // 8. Write the code that will add the number 0 to the beginning of the array without altering the original array. **HINT**: it's not `.unshift` You'll have to get creative! ;)
-newArr = [0 ,...numbers];
+var newArr = [0 ,...numbers];
 console.log(newArr);
 
 // Consider the variable:
-// ```javascript
-// var numSet = [2, 13, 6, 8, 4, 2]
-// ```
+var numSet = [2, 13, 6, 8, 4, 2]
+
 // 9. Write the code that finds the index of the first appearance of the number 2.
+console.log(numSet.indexOf(2));
 
 // 10. Write the code that finds the index of the last appearance of the number 2.
+console.log(numSet.lastIndexOf(2));
 
 // 11. Write the code that returns the number at the third index.
+console.log(numSet[2]);
 
-// Consider the variable:
+//  === Consider the variable: ===
+var characters = ["y", "a", "r", "r", "a"]
 
-// ```javascript
-// var characters = ["y", "a", "r", "r", "a"]
-// ```
 // 12. Write the code that brings all the letters in the characters array together into a string.
+
 
 // 13. Write the code that reverses the order of the letters in the characters array and saves it into a variable called charsReversed.
 
