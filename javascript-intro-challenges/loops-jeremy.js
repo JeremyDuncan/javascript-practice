@@ -39,9 +39,20 @@ const nums = [3, 57, -9, 20, 67]
     }
   }
   console.log(largestNum);
-  
+
   // - Create the code that will log the smallest number from the array.
+  var smallestNum = 100;
+  for (var i = 0; i < nums.length; ++i) {
+    if (smallestNum > nums[i]) {
+      smallestNum = nums[i];
+    }
+  }
+  console.log(smallestNum);
+
   // - Create the code that will log the remainder of each number when divided by 2.  
+  for (var i = 0; i < nums.length; ++i) {
+    console.log(nums[i] % 2);
+  }
   // Expected output: 1, 1, -1, 0, 1
 
 // Consider this variable:
