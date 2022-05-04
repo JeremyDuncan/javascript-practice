@@ -59,11 +59,29 @@ const nums = [3, 57, -9, 20, 67]
 const myString = "learn student"
 
   // - Create the code that will log the number of times the letter "e" occurs in the string.
-  // - Create the code that will log every other character in the string.
+  for (var i = 0; i < myString.length; ++i) {
+    if ( myString[i] == "e") {
+      console.log(myString[i]);
+    }
+  }
 
+  // - Create the code that will log every other character in the string.
+  for (var i = 0; i < myString.length; ++i) {
+    if (i % 2 == 0 && i != " " || i == 0) {
+      console.log(myString[i])
+    }
+  }
 // ### STRETCH Challenges
 
   // - Create the code that iterates from 5 to 15. For each iteration log if the current number is odd or even.  
+  for (var i = 5; i <= 15; ++i) {
+    if (i % 2 == 0) {
+      console.log([i] + " is EVEN");
+    }
+    if (i % 2 != 0) {
+      console.log([i] + " is ODD");
+    }
+  }
   // Expected output: "5 is odd" "6 is even" "7 is odd" ...etc
   // - Fizz Buzz: Create the code that will iterate from 1-100. If a number is a multiple of 3, replace it with the word `fizz`. If a number is a multiple of five, replace it with the word `buzz`. If a number is a multiple of both 3 and 5, replace it with `fizzbuzz`.  
   // Expected output: 1, 2, "fizz", 4, "buzz", "fizz", 7, 8, "fizz", "buzz", 11, "fizz", 13, 14, "fizzbuzz" ...etc
