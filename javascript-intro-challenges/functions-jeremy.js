@@ -125,9 +125,24 @@
 // 2. The Pluralizer  
  //  (a) Write a function named `pluralizer` that takes a number and a singular noun as arguments and returns the number and pluralized form of the noun, if necessary.
   function pluralizer(number, noun) {
-    
+    var singularNounArr = ["sheep", "goose", "child", "person", "species"];
+    var plouralNounArr = ["sheep", "geese", "children", "people", "species"];
+
+    for (var i = 0; i < singularNounArr.length; ++i) {
+      if (singularNounArr[i] === noun) {
+        return console.log(number + " " + plouralNounArr[i])
+      }
+    }
+
+    if (number === 1) {
+      return console.log(number + " " + noun);
+    } else {
+      return console.log(number + " " + noun+"s")
+    }
   }
 
+  pluralizer(1, "goose");
+  pluralizer(1, "cat");
   pluralizer(5, "cat")
   // expected output: "5 cats"
 
