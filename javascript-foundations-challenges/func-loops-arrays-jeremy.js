@@ -140,11 +140,43 @@ var addUp3 = 600
 
 
 // **EPIC Challenges**
-
 // - Create a function called highLow that takes in a number and returns whether the number is higher or lower than the "answer".
+
+//var input = prompt("Guess a number between 1 and 100.");
+  function highLow(num) {
+    var answer = 67;
+    if (num == answer) {
+      console.log("Thats correct! You Win!");
+      return true;
+    } else if (num > answer) {
+      console.log("You guessed too high a number!");
+      return false;
+    } else {
+      console.log("You guessed too low a number!");
+      return false;
+    } 
+  }
+
+  function game() {
+    var input = 0;
+    var tries = 0;
+    for (var gameWon = false; gameWon == false;) {
+      input = prompt("Guess a number between 1 and 100.");
+      gameWon = highLow(input);
+      tries += 1;
+      console.log(tries);
+      if (tries === 7) {
+        console.log("Too many Tries! Game Over!")
+        break;
+      }
+    }
+  }
+
+  game();
 // - Create an HTML page and link your JavaScript file. More info [here](../tools-and-resources/linking-html-javascript.md).
 // - As a user, I see a prompt or input where I can guess a number between 1 and 100 (both inclusive).
 // - As a user, I can see if my guess is too high or too low.
 // - As a user, if I guess the "answer" correctly I am notified that I won.
 // - As a user, I can continue to guess the "answer" until I am correct.
 // - STRETCH: As a user, if I have not guessed the correct number in seven tries I see a losing message.
+  
