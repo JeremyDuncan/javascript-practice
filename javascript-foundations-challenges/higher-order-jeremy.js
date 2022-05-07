@@ -35,17 +35,29 @@ var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
 var getTruthy = (array) => {
   return array.filter(value => value != null && value != " " || value > 0 || value == true );
 }
+
 console.log(getTruthy(filterArrayValues));
 // --> [58, "abcd", true]
 
 // **STRETCH Challenges**
 // 1. Create a function that takes in a string and returns a new string with all the vowels removed.
+var str = "javascript is awesome";
 
-var str = "javascript is awesome"
+var removeVowels = (string) => {
+  var array = [];
+  
+  for (var i = 0; i < string.length; i++) {
+    array.push(string[i]);
+  }
+
+  return array.filter(value => value != "a" && value != "e" && value != "i" && value != "o" && value != "u").join("");
+}
+// value != "a" && value != "e" && value != "i"
+console.log(removeVowels(str));
 // --> "jvscrpt s wsm"
 
 // 2. Create a function that takes in two arrays as arguments returns one array with no duplicate values.
 
-var arr1 = [3, 7, 10, 5, 4, 3]
-var arr2 = [7, 8, 2, 1, 5, 4]
+var arr1 = [3, 7, 10, 5, 4, 3];
+var arr2 = [7, 8, 2, 1, 5, 4];
 // --> [3, 7, 10, 5, 4, 8, 2, 1]
