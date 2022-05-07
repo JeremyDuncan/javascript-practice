@@ -45,7 +45,7 @@ var str = "javascript is awesome";
 
 var removeVowels = (string) => {
   var array = [];
-  
+
   for (var i = 0; i < string.length; i++) {
     array.push(string[i]);
   }
@@ -57,7 +57,10 @@ console.log(removeVowels(str));
 // --> "jvscrpt s wsm"
 
 // 2. Create a function that takes in two arrays as arguments returns one array with no duplicate values.
-
 var arr1 = [3, 7, 10, 5, 4, 3];
 var arr2 = [7, 8, 2, 1, 5, 4];
+
+var combineArr = arr1.concat(arr2.filter((value) => arr1.indexOf(value) < 0));
+
+console.log(combineArr);
 // --> [3, 7, 10, 5, 4, 8, 2, 1]
