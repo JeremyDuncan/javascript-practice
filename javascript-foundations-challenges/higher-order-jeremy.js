@@ -12,9 +12,13 @@
   // --> [30, 90, 150, 40, 100]
 
 // 2. Write a function that takes in an array of numbers and returns a new array with only odd numbers.
+  var arr2 = [2, 7, 3, 5, 8, 10, 13]
 
-var arr2 = [2, 7, 3, 5, 8, 10, 13]
-// --> [7, 3, 5, 13]
+  var getOdd = (array) => {
+    return array.filter(value => value % 2 != 0)
+  }
+  console.log(getOdd(arr2));
+  // --> [7, 3, 5, 13]
 
 // 3. Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** Use [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) method
 
