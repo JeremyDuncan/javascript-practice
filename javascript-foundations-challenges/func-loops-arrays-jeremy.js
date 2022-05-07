@@ -86,21 +86,44 @@ console.log(challenge5);
 
 // **STRETCH Challenges**
 // 1. Create a function that takes in two arrays and returns one array with no duplicate values.
+function combineArrays(arr1, arr2) {
+  var newArr = [];
+  var resultArr = [];
 
+  for (var i = 0; i < arr1.length; i++) {
+    newArr.push(arr1[i]);
+  }
+
+  for (var i = 0; i < arr2.length; i++) {
+    newArr.push(arr2[i]);
+  }
+
+  for (var i = 0; i < newArr.length; i++) {
+    if (resultArr.indexOf(newArr[i]) == -1) {
+      resultArr.push(newArr[i]);
+    }
+  }
+
+  return resultArr;
+}
 
 var arr1 = [3, 7, 10, 5, 4, 3, 3]
 var arr2 = [7, 8, 2, 3, 1, 5, 4]
+var stretchChallenge1 = combineArrays(arr1, arr2);
+console.log(stretchChallenge1);
 // --> [3, 7, 10, 5, 4, 8, 2, 1]
 
 // 2. Create a function that takes in two numbers as arguments and returns an array the length of the first number filled with the second number.
-var arrayLength = 6
-var arrayValue = 0
-// --> [0, 0, 0, 0, 0, 0]
+var stretchChallenge2 = (arrayLength, arrayValue) => {
+  var array = [];
+  for (var i = 0; i < arrayLength; i++) {
+    array.push(arrayValue);
+  }
+  return array;
+}
 
-var arrayLength = 4
-var arrayValue = 11
-// --> [11, 11, 11, 11]
-
+console.log(stretchChallenge2(6,0));
+console.log(stretchChallenge2(4,11))
 
 // 3. Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function.
 
