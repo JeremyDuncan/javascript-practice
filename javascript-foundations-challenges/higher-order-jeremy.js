@@ -3,9 +3,13 @@
 // **Don't forget to pseudo code.**
 
 // 1. Write a function that takes in an array of numbers and returns a new array with all numbers multiplied by 10.
+  var arr1 = [3, 9, 15, 4, 10]
 
-var arr1 = [3, 9, 15, 4, 10]
-// --> [30, 90, 150, 40, 100]
+  const multiplier = (array) => {
+    return array.map(value => value * 10)
+  }
+  console.log(multiplier(arr1))
+  // --> [30, 90, 150, 40, 100]
 
 // 2. Write a function that takes in an array of numbers and returns a new array with only odd numbers.
 
