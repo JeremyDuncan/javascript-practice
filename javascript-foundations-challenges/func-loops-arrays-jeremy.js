@@ -19,7 +19,6 @@ console.log(newArr);
 // 2. Write a function that takes in an array of numbers and returns a new array with only odd numbers.
 function getOdd(num) {
   var result = [];
-  
   for (var i = 0; i < num.length; ++i) {
     if (num[i] % 2 != 0) {
       result.push(num[i]);
@@ -34,23 +33,56 @@ console.log(challenge2);
 // --> [-7, 3, 5, 13]
 
 // 3. Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** use the `typeof` method.
+function filterLetters(arr) {
+  var string = "";
+  for (var i = 0; i < arr.length; i++) {
+    if (typeof(arr[i]) == "string") {
+      string += arr[i];
+    }
+  }
+  return string;
+}
 var comboArr = [7, "n", true, "i", "c", 10, "e", -388, "w", 3, "o", 0, "r", false, "k"]
+var challenge3 = filterLetters(comboArr);
+console.log(challenge3);
 // --> "nicework"
 
 // 4. Create a function that takes in an array of numbers and returns the sum.
+var getSum = (num) => {
+  var sum = 0;
+  for (var i = 0; i < num.length; ++i) {
+    sum += num[i];
+  }
+  return sum;
+}
 
 var addThese1 = [1, 2, 3, 4]
+var challenge4 = getSum(addThese1);
+console.log(challenge4);
+
 // --> 10
 
 var addThese2 = []
+var challenge4_2 = getSum(addThese2);
+console.log(challenge4_2);
 // --> 0
 
-
 // 5. Create a function that takes in an array of numbers and returns the index of the largest number.
+function getIndexOfLargest(num) {
+  var largest = 0;
+  for (var i = 0; i < num.length; ++i) {
+    if (largest < num[i]) {
+      largest = num[i];
+    }
+  }
+
+  return num.indexOf(largest);
+}
 
 var indexHighestNumber = [1, 4, 2, 3]
+var challenge5 = getIndexOfLargest(indexHighestNumber)
+console.log(challenge5);
 // --> 1
-
 
 // **STRETCH Challenges**
 // 1. Create a function that takes in two arrays and returns one array with no duplicate values.
