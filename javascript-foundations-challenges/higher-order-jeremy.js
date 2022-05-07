@@ -30,12 +30,15 @@
   // --> "nicework"
 
 // 4. Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
-
 var filterArrayValues = [58, " ", "abcd", true, null, false, 0]
+
+var getTruthy = (array) => {
+  return array.filter(value => value != null && value != " " || value > 0 || value == true );
+}
+console.log(getTruthy(filterArrayValues));
 // --> [58, "abcd", true]
 
 // **STRETCH Challenges**
-
 // 1. Create a function that takes in a string and returns a new string with all the vowels removed.
 
 var str = "javascript is awesome"
