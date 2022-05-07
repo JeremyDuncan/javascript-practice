@@ -21,9 +21,13 @@
   // --> [7, 3, 5, 13]
 
 // 3. Write a function that takes in an array of numbers and letters and returns a string with only the letters. **HINT:** Use [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) method
+  var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
 
-var comboArr = [7, "n", "i", "c", 10, "e", false, "w", 3, "o", "r", "k"]
-// --> "nicework"
+  var getString = (array) => {
+    return array.filter(value => typeof(value) === "string").join("");
+  }
+  console.log(getString(comboArr));
+  // --> "nicework"
 
 // 4. Create a function that takes in an array and returns an array without any false, null, 0, or blank values.
 
