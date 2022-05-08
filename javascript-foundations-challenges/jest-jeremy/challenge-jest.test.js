@@ -161,6 +161,16 @@
 
 // 12. Write the test for a function called `divisibleBy` that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
   // - Write the function that will make the test pass.
+    describe("divisibleBy", () => {
+      it("takes two numbers as arguments and returns whether the first number is evenly divisible by the second.", () => {
+        expect(divisibleBy(10, 5)).toEqual("10 is evenly divisible by 5.")
+        expect(divisibleBy(100, 10)).toEqual("100 is evenly divisible by 10.")
+        expect(divisibleBy(11, 5)).toEqual("11 is NOT evenly divisible by 5.")      })
+    })
+
+    var divisibleBy = (num1, num2) => {
+      return num1 % num2 == 0 ? `${num1} is evenly divisible by ${num2}.` : `${num1} is NOT evenly divisible by ${num2}.`;
+    }
 
 // 13. Write the test for a function called `fizzbuzz`. If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.
   //  - Write the function that will make the test pass.
