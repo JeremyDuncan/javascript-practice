@@ -1,10 +1,10 @@
 // ### Challenges
 
 // **Consider this variable:**
-const person = {
-  firstName: "Arthur",
-  lastName: "Dent"
-}
+  const person = {
+    firstName: "Arthur",
+    lastName: "Dent"
+  }
 // - Write the code that accesses the first name of the person object.
   console.log(person.firstName);
 
@@ -23,23 +23,60 @@ const person = {
   console.log(person.displayData());
 
 // **Consider this variable:**
-const product = {
-  name: "chair",
-  price: 24.99
-}
+  const product = {
+    name: "chair",
+    price: 24.99
+  }
 // - Write a function called describeProduct that takes the product object as an argument and logs "The product is a chair. It costs $24.99".
+  function describeProduct(productObject) {
+    var product = productObject.name;
+    var price = productObject.price;
+    return `The product is a ${product}. It costs ${price}.`
+  }
+
+  console.log(describeProduct(product));
+
 // - Write a function called totalWithTax that takes the product object as an argument and returns the total price of the chair that includes a 7% sales tax rounded to two decimals.
+  var totalWithTax = (obj) => {
+    var name = obj.name;
+    var price = obj.price;
+    var tax = .07;
+
+    return `The total cost of ${name} is ${(price + (price * tax)).toFixed(2)}`;
+  }
+
+  console.log(totalWithTax(product));
 
 // **Consider this variable:**
-const lunch = {
-  name: "PB and Banana",
-  type: "sandwich",
-  ingredients: ["bread", "peanut butter", "banana"]
-}
+  const lunch = {
+    name: "PB and Banana",
+    type: "sandwich",
+    ingredients: ["bread", "peanut butter", "banana"]
+  }
 // - Write the code that accesses the ingredients property.
+  console.log(lunch.ingredients);
+
 // - Write the code that access the third ingredient of the lunch object.
+  var thirdIngredient = lunch.ingredients[2];
+  console.log(thirdIngredient);
+
 // - Write a function that takes the lunch object as an argument and returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+  var announceIngredients = (obj) => {
+    var name = obj.name;
+    var type = obj.type;
+    var ingredients = obj.ingredients;
+
+    return `The ingredients for a ${name} ${type} are ${ingredients[0]}, ${ingredients[1]}, and ${ingredients[2]}.`;
+  } 
+
+  console.log(announceIngredients(lunch));
+
 // - Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
+lunch.announce = () => {
+  return `The ingredients for a ${lunch.name} ${lunch.type} are ${lunch.ingredients[0]}, ${lunch.ingredients[1]}, and ${lunch.ingredients[2]}.`;
+}
+
+console.log(lunch.announce());
 
 // **Consider this variable:**
 const animals = [
