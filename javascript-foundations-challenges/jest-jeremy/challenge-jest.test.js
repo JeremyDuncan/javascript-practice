@@ -54,6 +54,17 @@
 
 // 4. Write the test for a function that takes in two arguments(numbers) and returns the smaller number.
   // - Write the function that will make the test pass.
+    describe("determineSmaller", () => {
+      it("returns smaller number", () => {
+        expect(determineSmaller(10,5)).toEqual(5)
+        expect(determineSmaller(44,99)).toEqual(44)
+        expect(determineSmaller(1,10000)).toEqual(1)
+      })
+    })
+
+    var determineSmaller = (num1, num2) => {
+      return num1 < num2 ? num1 : num2;
+    }
 
 // 5. Write the test for a function that takes in one argument(number) and returns whether the number is odd.
   // - Write the function that will make the test pass.
