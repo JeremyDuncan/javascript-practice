@@ -174,3 +174,18 @@
 
 // 13. Write the test for a function called `fizzbuzz`. If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.
   //  - Write the function that will make the test pass.
+    describe("fizzbuzz", () => {
+      it("If a number is a multiple of 3, replace it with the word 'fizz'. If a number is a multiple of five, replace it with the word 'buzz'. If a number is a multiple of both 3 and 5, replace it with 'fizzbuzz'.", () => {
+        expect(fizzbuzz(3)).toEqual("fizz")
+        expect(fizzbuzz(15)).toEqual("fizzbuzz")
+        expect(fizzbuzz(5)).toEqual("buzz")
+        expect(fizzbuzz(29)).toEqual("")
+      })
+    })
+
+    var fizzbuzz = (number) => {
+      var result = "";
+      number % 3 == 0 ? result += "fizz" : null;
+      number % 5 == 0 ? result += "buzz" : null;
+      return result;
+    }
