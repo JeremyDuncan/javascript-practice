@@ -126,7 +126,16 @@
 
 // 9. Write the test for a function called `oddOrEven` that takes a number as an argument and logs whether the number is odd or even.
   // - Write the function that will make the test pass.
+    describe("oddOrEven", () => {
+      it("Takes a number and logs whether the number is odd or even.", () => {
+        expect(oddOrEven(88)).toEqual("88 is even.")
+        expect(oddOrEven(133)).toEqual("133 is odd.")
+      })
+    })
 
+    var oddOrEven = (number) => {
+      return number % 2 == 0 ? `${number} is even.` : `${number} is odd.`;
+    }
 // 10. Write the test for a function called `doubler` that takes a number and returns the result of the number multiplied by 2.
   // - Write the function that will make the test pass.
 
