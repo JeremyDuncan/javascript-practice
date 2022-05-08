@@ -6,9 +6,21 @@ const person = {
   lastName: "Dent"
 }
 // - Write the code that accesses the first name of the person object.
+  console.log(person.firstName);
+
 // - Write the code that accesses the last name of the person object.
+  console.log(person.lastName);
+
 // - Write the code that gives the person object a property of homePlanet and set it to 'Earth'.
+  person.homePlanet = "Earth";
+  console.log(person.homePlanet);
+
 // - Update the person object with a method that logs "Arthur Dent is from planet Earth".
+  person.displayData = displayData = () => {
+    return `${person.firstName} ${person.lastName} is from planet ${person.homePlanet}.`;
+  } 
+
+  console.log(person.displayData());
 
 // **Consider this variable:**
 const product = {
