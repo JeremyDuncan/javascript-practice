@@ -68,7 +68,16 @@
 
 // 5. Write the test for a function that takes in one argument(number) and returns whether the number is odd.
   // - Write the function that will make the test pass.
+    describe("oddNumberDetector", () => {
+      it("returns wehter the number is odd", () => {
+        expect(oddNumberDetector(1)).toEqual("1 is Odd.")
+        expect(oddNumberDetector(2)).toEqual("2 is not Odd.")
+      })
+    })
 
+    var oddNumberDetector = (number) => {
+      return number % 2 == 0 ? `${number} is not Odd.` : `${number} is Odd.`;
+    }
 // 6. Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
   // - Write the function that will make the test pass.
 
