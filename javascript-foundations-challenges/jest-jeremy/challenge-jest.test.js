@@ -147,9 +147,17 @@
     })
 
     var doubler = (number) => {return number * 2;}
-    
+
 // 11. Write the test for a function called `multiply` that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
   // - Write the function that will make the test pass.
+    describe("multiply", () => {
+      it("takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.", () => {
+        expect(multiply(10, 2)).toEqual(20)
+        expect(multiply(123, 123)).toEqual(15129)
+      })
+    })
+
+    var multiply = (num1, num2) => {return num1 * num2;}
 
 // 12. Write the test for a function called `divisibleBy` that takes two numbers as arguments and returns whether the first number is evenly divisible by the second so that divisibleBy(10, 5) logs "10 is evenly divisible by 5".
   // - Write the function that will make the test pass.
