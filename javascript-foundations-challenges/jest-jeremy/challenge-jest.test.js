@@ -35,8 +35,22 @@
       } 
     }
 
-// 3. Write the test for a function that returns "in budget" if a price is lower than $300.  
+// 3. Write the test for a function that returns "In budget" if a price is lower than $300.  
   // - Write the function that will make the test pass.
+    describe("getBudget", () => {
+      it("returns 'in budget' if price is lower than $300", () => {
+        expect(getBudget(500)).toEqual("Not in budget")
+        expect(getBudget(100)).toEqual("In budget")
+      })
+    })
+
+    var getBudget = (price) => {
+      if (price <= 300) {
+        return "In budget";
+      } else {
+        return "Not in budget"
+      }
+    }
 
 // 4. Write the test for a function that takes in two arguments(numbers) and returns the smaller number.
   // - Write the function that will make the test pass.
