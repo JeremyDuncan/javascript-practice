@@ -20,6 +20,20 @@
   }
 // 2. Write the test for a function that returns "relax" if you are stressed and "keep going" if you are not stressed.
   // - Write the function that will make the test pass.
+    describe("areYouStressed", () => {
+      it("returns relax or keep going based on input", () => {
+        expect(areYouStressed("yes")).toEqual("relax")
+        expect(areYouStressed("no")).toEqual("keep going")
+      })
+    })
+
+    var areYouStressed = (input) => {
+      if (input === "yes") {
+        return "relax";
+      } else {
+        return "keep going";
+      } 
+    }
 
 // 3. Write the test for a function that returns "in budget" if a price is lower than $300.  
   // - Write the function that will make the test pass.
