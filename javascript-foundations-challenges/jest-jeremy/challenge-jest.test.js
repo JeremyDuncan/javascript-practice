@@ -113,6 +113,16 @@
 
 // 8. Write the test for a function called `greeter` that takes a name as an argument and returns a greeting with that name to the screen.
   // - Write the function that will make the test pass.
+    describe("greeter", () => {
+      it("Takes a name and returns a greeting with that name on the screen.", () => {
+        expect(greeter("John")).toEqual("Welcome John!")
+        expect(greeter("Mary")).toEqual("Welcome Mary!")
+      })
+    })
+
+    var greeter = (name) => {
+      return `Welcome ${name}!`;
+    }
 
 // 9. Write the test for a function called `oddOrEven` that takes a number as an argument and logs whether the number is odd or even.
   // - Write the function that will make the test pass.
