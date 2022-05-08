@@ -136,9 +136,18 @@
     var oddOrEven = (number) => {
       return number % 2 == 0 ? `${number} is even.` : `${number} is odd.`;
     }
+
 // 10. Write the test for a function called `doubler` that takes a number and returns the result of the number multiplied by 2.
   // - Write the function that will make the test pass.
+    describe("doubler", () => {
+      it("returns number multiplied by 2.", () => {
+        expect(doubler(100)).toEqual(200)
+        expect(doubler(12345678)).toEqual(24691356)
+      })
+    })
 
+    var doubler = (number) => {return number * 2;}
+    
 // 11. Write the test for a function called `multiply` that takes two numbers as arguments and logs the result of one of the numbers multiplied by the other.
   // - Write the function that will make the test pass.
 
