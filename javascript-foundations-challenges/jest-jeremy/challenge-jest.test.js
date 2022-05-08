@@ -100,9 +100,16 @@
       }
       return color
     }
-    
+
 // 7. Write the test for a function called `rick` that returns "Morty".
   // - Write the function that will make the test pass.
+    describe("rick", () => {
+      it("returns Morty.", () => {
+        expect(rick()).toEqual("Morty")
+      })
+    })
+
+    var rick = () => {return "Morty";}
 
 // 8. Write the test for a function called `greeter` that takes a name as an argument and returns a greeting with that name to the screen.
   // - Write the function that will make the test pass.
