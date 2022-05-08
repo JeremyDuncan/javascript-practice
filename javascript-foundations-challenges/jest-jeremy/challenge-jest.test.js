@@ -78,9 +78,29 @@
     var oddNumberDetector = (number) => {
       return number % 2 == 0 ? `${number} is not Odd.` : `${number} is Odd.`;
     }
+
 // 6. Write the test for a function that takes in a fruit and returns "yellow" if the argument is banana, "red" if apple and "purple" if grape.
   // - Write the function that will make the test pass.
+    describe("getFruitColor", () => {
+      it("returns color of fruit.", () => {
+        expect(getFruitColor("banana")).toEqual("yellow")
+        expect(getFruitColor("grape")).toEqual("purple")
+        expect(getFruitColor("apple")).toEqual("red")
+      })
+    })
 
+    var getFruitColor = (fruit) => {
+      var color = "";
+      if (fruit == "banana") {
+        color = "yellow";
+      } else if (fruit == "grape") {
+        color = "purple";
+      } else if (fruit == "apple") {
+        color = "red";
+      }
+      return color
+    }
+    
 // 7. Write the test for a function called `rick` that returns "Morty".
   // - Write the function that will make the test pass.
 
