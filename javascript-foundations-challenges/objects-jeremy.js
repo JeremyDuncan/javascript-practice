@@ -104,35 +104,54 @@
   console.log(animalNames); // [ "Waffles, "Fluffy", "Spelunky", "Hank" ]
 
 // - Create a function that takes in an array of animal objects and returns a new array of the names of the animals that are more than 10 years old.
+  var getOlderAnimals = (creatures) => {
+    var overTen = [];
+    for (var i = 0; i < creatures.length; ++i) {
+      creatures[i].age > 10 ? overTen.push(creatures[i].name) : null;
+    }
+    return overTen;
+  }
+
+  var animalsOverTen = getOlderAnimals(animals);
+  console.log(animalsOverTen); // [ "Fluffy", "Hank" ]
+
 // - Create a function that takes in an array of animal objects and returns a new array with a sentence about each animal.
+  var animalDetails = (creatures) => {
+    var animalInfo = [];
+    for (var i = 0; i < creatures.length; ++i) {
+      animalInfo.push(`${creatures[i].name} is a ${creatures[i].type} that is ${creatures[i].age} years old.`)
+    }
+    return animalInfo;
+  }
+  // "Waffles is a dog that is 7 years old", etc...
+  console.log(animalDetails(animals));
 
 // **Consider this variable:**
-
-const author = {
-  name: "H. G. Wells",
-  genre: "science fiction"
-}
+  const author = {
+    name: "H. G. Wells",
+    genre: "science fiction"
+  }
 // - Write the code that destructures the author object so that the following code snippet will run successfully:
 
-console.log(`${name} is a ${genre} author`)
+  console.log(`${name} is a ${genre} author`)
 // Output: "H. G. Wells is a science fiction author"
 
 // **Consider this variable:**
 
-const pokeOne = {
-  species: "Charmandar",
-  pokemon_type: "Fire"
-}
+  const pokeOne = {
+    species: "Charmandar",
+    pokemon_type: "Fire"
+  }
 
-const pokeTwo = {
-  species: "Magikarp",
-  pokemon_type: "Water"
-}
+  const pokeTwo = {
+    species: "Magikarp",
+    pokemon_type: "Water"
+  }
 
 // - Create a function called describePokemon that take an object like the ones above and uses destructuring to return a description of the Pokemon so that the following code snippet will run successfully:
-console.log(describePokemon(pokeOne))
+  console.log(describePokemon(pokeOne))
 // Output: "Charmandar is a Fire pokemon"
-console.log(describePokemon(pokeTwo))
+  console.log(describePokemon(pokeTwo))
 // Output: "Magikarp is a Water pokemon"
 
 // **Consider this variable:**
@@ -145,12 +164,12 @@ const triangleDimensions = {
 // - Write the code that will update the base to be the value of 6.
 
 // **Consider this variable:**
-const learn = {
-  cohorts: {
-    "2021": ["Alpha", "Bravo", "Charlie", "Delta", "Echo"],
-    "2022": ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot"]
+  const learn = {
+    cohorts: {
+      "2021": ["Alpha", "Bravo", "Charlie", "Delta", "Echo"],
+      "2022": ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot"]
+    }
   }
-}
 
 // - Write the code that logs the name of your cohort.
 // - Write the code that uses destructuring to log the name of your cohort.
