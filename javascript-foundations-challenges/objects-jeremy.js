@@ -132,12 +132,10 @@
     genre: "science fiction"
   }
 // - Write the code that destructures the author object so that the following code snippet will run successfully:
-
-  console.log(`${name} is a ${genre} author`)
-// Output: "H. G. Wells is a science fiction author"
+  const { name, genre } = author;
+  console.log(`${name} is a ${genre} author`); // Output: "H. G. Wells is a science fiction author"
 
 // **Consider this variable:**
-
   const pokeOne = {
     species: "Charmandar",
     pokemon_type: "Fire"
@@ -148,6 +146,10 @@
     pokemon_type: "Water"
   }
 
+  var describePokemon = (pokemon) => {
+    var { species, pokemon_type } = pokemon;
+    return `${species} is a ${pokemon_type} pokemon.`; 
+  }
 // - Create a function called describePokemon that take an object like the ones above and uses destructuring to return a description of the Pokemon so that the following code snippet will run successfully:
   console.log(describePokemon(pokeOne))
 // Output: "Charmandar is a Fire pokemon"
@@ -159,20 +161,50 @@ const triangleDimensions = {
   base: 2,
   height: 5
 }
-
 // - Modify the triangleDimensions object to have a method that returns the area of the triangle.
+  triangleDimensions.getArea = () => {
+    var {base, height} = triangleDimensions;
+    return 0.5 * (base * height);
+  }
+  console.log(triangleDimensions.getArea());
+
 // - Write the code that will update the base to be the value of 6.
+  triangleDimensions.base = 6;
+  console.log(triangleDimensions.base);
 
 // **Consider this variable:**
-  const learn = {
+  var learn = {
     cohorts: {
       "2021": ["Alpha", "Bravo", "Charlie", "Delta", "Echo"],
       "2022": ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot"]
     }
   }
-
 // - Write the code that logs the name of your cohort.
-// - Write the code that uses destructuring to log the name of your cohort.
-// - Create a function that takes an object like the one above and returns an array with a string of every cohort name and year.
+  console.log(learn.cohorts[2022][3]); // "Delta"
 
+// - Write the code that uses destructuring to log the name of your cohort.
+  var {cohorts: 
+        {"2022": 
+          [
+            alpha, 
+            bravo, 
+            charlie, 
+            delta
+          ]
+        }
+      } = learn;
+  //var {cohorts: {"2022": [alpha, bravo, charlie, delta]}} = learn;
+  console.log(delta); // "Delta"
+
+// - Create a function that takes an object like the one above and returns an array with a string of every cohort name and year.
+    var getCohort = (obj) => {
+      var result = [];      
+      for (value in obj.cohorts) {
+        for (var i = 0; i < obj.cohorts[value].length; i++) {
+          result.push(`${value} ${obj.cohorts[value][i]}`)
+        }
+      }
+      return result;
+    }
+    console.log(getCohort(learn));
 // Output: ["2021 Alpha", "2021 Bravo", "2021 Charlie", "2021 Delta", "2021 Echo", "2022 Alpha", "2022 Bravo", "2022 Charlie", "2022 Delta", "2022 Echo", "2022 Foxtrot"]
