@@ -72,21 +72,37 @@
   console.log(announceIngredients(lunch));
 
 // - Update the lunch object with method that returns "The ingredients for a PB and Banana sandwich are bread, peanut butter, and banana."
-lunch.announce = () => {
-  return `The ingredients for a ${lunch.name} ${lunch.type} are ${lunch.ingredients[0]}, ${lunch.ingredients[1]}, and ${lunch.ingredients[2]}.`;
-}
+  lunch.announce = () => {
+    return `The ingredients for a ${lunch.name} ${lunch.type} are ${lunch.ingredients[0]}, ${lunch.ingredients[1]}, and ${lunch.ingredients[2]}.`;
+  }
 
-console.log(lunch.announce());
+  console.log(lunch.announce());
 
 // **Consider this variable:**
-const animals = [
-  { name: "Waffles", type: "dog", age: 7 },
-  { name: "Fluffy", type: "cat", age: 14 },
-  { name: "Spelunky", type: "dog", age: 4 },
-  { name: "Hank", type: "cat", age: 11 }
-]
+  const animals = [
+    { name: "Waffles", type: "dog", age: 7 },
+    { name: "Fluffy", type: "cat", age: 14 },
+    { name: "Spelunky", type: "dog", age: 4 },
+    { name: "Hank", type: "cat", age: 11 }
+  ]
 // - Create a function that takes in an array of animal objects and returns a new array with only the objects that are cats.
+  var getCats = (creatures) => {
+    return creatures.filter(animal => animal.type === "cat");
+  }
+  
+  console.log(getCats(animals));
+
 // - Create a function that takes in an array of animal objects and returns a new array with only the names of the animals.
+  var getAnimalNames = (creatures) => {
+    var resultsObj = [];
+    for (var i = 0; i < creatures.length; ++i) {
+      resultsObj.push(creatures[i].name);
+    }
+    return resultsObj;
+  }
+  var animalNames = getAnimalNames(animals);
+  console.log(animalNames); // [ "Waffles, "Fluffy", "Spelunky", "Hank" ]
+
 // - Create a function that takes in an array of animal objects and returns a new array of the names of the animals that are more than 10 years old.
 // - Create a function that takes in an array of animal objects and returns a new array with a sentence about each animal.
 
