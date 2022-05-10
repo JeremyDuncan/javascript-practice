@@ -1,0 +1,1 @@
+//- As a user, I can see a Profile component with information about you and your partner
