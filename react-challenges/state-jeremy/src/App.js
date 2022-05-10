@@ -18,6 +18,9 @@ function App() {
   return (
     <>
     <Colorbox/>
+    <Colorbox/>
+    <Colorbox/>
+    <Colorbox/>
     </>
   );
 }

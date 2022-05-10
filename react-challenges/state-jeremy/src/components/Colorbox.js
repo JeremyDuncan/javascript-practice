@@ -17,13 +17,79 @@
 import React, { Component } from 'react'
 
 class Colorbox extends Component{
-  render(){
+  constructor(props) {
+    super(props)
+    this.state = {
+      count: 0,
+      box: <p style={{
+        background: "white", 
+        border: '2px solid black', 
+        width: '150px'}}>White</p>,
+      
+    }
+  }
+
+  changeColor = () => {
+    var colorArr = ["green", "blue", "yellow", "red", "purple", "orange"];
+    let newCount = this.state.count
+    if (this.state.count < 5) {
+      newCount = this.state.count + 1
+    } else {
+      newCount = 0;
+    }
+    
+    let color = colorArr[newCount];
+    
+    this.setState({
+      box: <p style={{
+        background: color,
+        border: '2px solid black', 
+        width: '150px'
+      }}>{color}</p>, 
+      count: newCount
+    }); // {color: newColor})
+  }
+
+  render() {
+    var {box} = this.state
+    var {count} = this.state
     return(
       <>
-        <h1>My First React App</h1>
+      <h1>{box}</h1>
+      <button onClick = {this.changeColor}>
+        Press me!
+      </button>
       </>
     )
   }
 }
 
 export default Colorbox
+
+// ################################## //
+class Counter extends Component{
+  constructor(props){
+    super(props)
+    this.state = {
+      count: 0
+    }
+  }
+
+  handleChange = () => {
+    let newCount = this.state.count + 1
+    this.setState({count: newCount})
+  }
+
+  render(){
+    let {count} = this.state
+
+    return(
+      <>
+        <h2>Counter: {count}</h2>
+        <button onClick = {this.handleChange}>
+          Press Me!
+        </button>
+      </>
+    )
+  }
+}
