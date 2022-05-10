@@ -13,13 +13,17 @@
 // - As a user, I can see a button to add or remove color boxes
 // - As a user, when I click the add button, I can add one colorbox that acts independently of the other colorboxes
 // - As a user, when I click the remove button, I can remove one colorbox
-import Colorbox from './components/Colorbox'
-function App() {
-  return (
-    <>
-    <Colorbox/>
-    </>
-  );
+
+import React, { Component } from 'react'
+
+class Colorbox extends Component{
+  render(){
+    return(
+      <>
+        <h1>My First React App</h1>
+      </>
+    )
+  }
 }
 
-export default App;
+export default Colorbox
