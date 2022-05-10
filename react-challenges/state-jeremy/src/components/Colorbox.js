@@ -25,7 +25,8 @@ class Colorbox extends Component{
         style={{                    // Sets inital box on load to:
         background: "white",        // White Background
         border: '2px solid black',  // Solid Black Border
-        width: '150px'              // 150px Wide
+        width: '150px',
+        height: '150px'          // 150px Wide
         }}
         >White</p>
     };
@@ -47,7 +48,8 @@ class Colorbox extends Component{
       box: <p style={{
         background: color,
         border: '2px solid black', 
-        width: '150px'
+        width: '150px',
+        height: '150px'
         }}>{color}</p>,               // Displays color name in box
       count: newCount                 // Saves new count in this.state.count
     });
@@ -58,8 +60,11 @@ class Colorbox extends Component{
     var {count} = this.state
     return( // Displays box with background color // calls changeColor() to change {box} color
       <>
-      <h1>{box}</h1>                  
+      <div class="App" id="Square">
+      <h1>{box}</h1>
+      </div>                  
       <button onClick = {this.changeColor}>Press me!</button>   
+      
       </>
     )
   };
