@@ -10,11 +10,13 @@ import Profile from './components/Profile'
 function App() {
   return (
       <>
+        <body style={{background: "grey"}}> 
         <Header />
         <Profile />
         <Recipes />
         <Favorites />
         <Footer />
+        </body>
       </>
   );
 }
