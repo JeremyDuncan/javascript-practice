@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>Intro to React</title>
+
+</head>
+<body>
+
+  <div id="react-container"></div>
+
+  <script type="text/babel">
+    class App extends React.Component{
+      render(){
+        return(
+          <>
+          <Header/>
+          <Content/>
+          <Footer/>
+          </>
+        )
+      }
+    }
+    class Header extends React.Component{
+    render(){
+      return(
+        <>
+          <h1>Delta Cohort</h1>
+          <p>This is an app developed from LearnAcademy training.</p>
+        </>
+      )
+    }
+  }
+    class Content extends React.Component{
+    render(){
+      return(
+        <>
+          <h2>Class Roster</h2>
+          <p>Jeremy Duncan</p>
+          <p>Future Classmate 1</p>
+          <p>Future Classmate 2</p>
+          <p>Future Classmate 3</p>
+          <p>Future Classmate 4</p>
+        </>
+      )
+    }
+  }
+  class Footer extends React.Component{
+    render(){
+      return(
+        <>
+          <p>Jeremy Duncan</p>
+        </>
+      )
+    }
+  }
+    const domContainer = document.querySelector('#react-container')
+    ReactDOM.render(<App />, domContainer)
+  </script>
+</body>
+</html>
+
+<!--
+- As a user, I see a Header component with the name of your cohort
+- As a user, I can see a Content component that contains a list of all your classmates
+- As a user, I can see a Footer component with your name 
+-->
