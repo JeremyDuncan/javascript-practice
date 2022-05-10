@@ -4,7 +4,11 @@ class Recipes extends Component{
   render(){
     return(
       <>
-        <h1>This is the recipes</h1>
+        <ul>
+          <li>Recipe 1</li>
+          <li>Recipe 2</li>
+          <li>Recipe 3</li>
+        </ul>
       </>
     )
   }
