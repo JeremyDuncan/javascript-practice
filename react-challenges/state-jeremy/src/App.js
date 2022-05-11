@@ -13,16 +13,58 @@
 // - As a user, I can see a button to add or remove color boxes
 // - As a user, when I click the add button, I can add one colorbox that acts independently of the other colorboxes
 // - As a user, when I click the remove button, I can remove one colorbox
+import React, { Component } from 'react'
 import Colorbox from './components/Colorbox'
-function App() {
-  return (
-    <>
-    <Colorbox/>
-    <Colorbox/>
-    <Colorbox/>
-    <Colorbox/>
-    </>
-  );
-}
+class App extends Component {
+  constructor(props) {
+    super(props) 
+    this.state = {
+      boxes: [
+      ],
+      currentBoxes: -1
+    }
+  }
+  // Adds new <Colorbox/> Module to this.state.boxes[] Array for every call 
+  addBox = () => {
+   var  box = <Colorbox/>
+   this.setState({ boxes: [...this.state.boxes, box], currentBoxes: this.state.currentBoxes + 1 });
+  }
+
+  // Removes 1 <Colorbox/> Module from this.state.boxes[] Array for every call 
+  removeBox = () => {
+    var box = <colorbox/>
+    var i = this.state.currentBoxes
+    this.setState({boxes: [...this.state.boxes.slice(0,i), ...this.state.boxes.slice(i+1)], currentBoxes: this.state.currentBoxes - 1 });
+  }
+
+  
+  
+  render() {
+    {var count = this.state.currentBoxes}
+    return (
+      <>
+        { this.state.boxes }
+
+        <br/><br/>
+
+        {/* Button calls addBox() */}
+        {/* Adds 1 <Colorbox/> Component per click */}
+        <button onClick={this.addBox}>                        
+          + Add Box                                           
+        </button>
+
+        {/* Button calls removeBox() if count > -1 */}
+        {/* Removes 1 <Colorbox/> Component per click */}
+        <button onClick={count > -1 ? this.removeBox: null}>  
+          - Remove Box                                        
+        </button>                   
+
+        {console.log(this.state.currentBoxes)}
+        {console.log(this.state.boxes)}
+      </>
+    );
+  }
+  }
+ 
 
 export default App;
