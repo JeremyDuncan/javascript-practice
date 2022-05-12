@@ -48,9 +48,9 @@ class App extends Component {
 
   render(){
     return(
-      <div Id="color">
-        <h1 class="center">Dice Roller!</h1>
-
+      <div id="color">
+        <h1 className="center">Dice Roller!</h1>
+        
         {/*Stores rollLog value into rollLog for Roll*/}
         <Roll rollLog={ this.state.rollLog } /> 
         
@@ -59,13 +59,13 @@ class App extends Component {
         <br />
 
         {/*//Calls rollDie() => logRoll*/}
-        <button class="but" onClick={this.rollDie}>
+        <button className="but" onClick={this.rollDie}>
           Roll the Dice!
         </button>
         <br />
 
         {/*//Calls clearLog()*/}
-        <button class="but" onClick={this.clearLog }>
+        <button className="but" onClick={this.clearLog }>
           Reset
         </button>
       </div>
