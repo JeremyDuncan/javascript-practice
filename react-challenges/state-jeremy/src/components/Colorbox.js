@@ -57,7 +57,6 @@ class Colorbox extends Component{
 
   render() {
     var {box} = this.state
-    var {count} = this.state
     return( // Displays box with background color // calls changeColor() to change {box} color
       <>
       <div className="App" id="Square">
