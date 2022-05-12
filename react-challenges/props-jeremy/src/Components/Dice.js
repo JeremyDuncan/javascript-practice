@@ -16,23 +16,21 @@ class Dice extends Component{
   constructor(props) {
     super(props) 
     this.state = {
-      diceResult: 0
     }
   }
+
   rollDice = () => {
     var diceRoll = Math.floor(Math.random() * 6) + 1
     this.setState({diceResult: diceRoll })
   }
 
   render(){
-    {console.log(this.state.diceResult)}
     return(
       <div>
         <h1>Dice Component</h1>
-        <h2>Press Roll Button to Roll Dice</h2>
-        <button onClick={this.rollDice}>
-          Roll Dice!
-        </button>
+        <div class="dice">
+          <h1>{this.props.roll}</h1>
+        </div>
       </div>
     )
   }
