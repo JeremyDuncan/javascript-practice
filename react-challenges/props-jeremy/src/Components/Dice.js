@@ -27,7 +27,7 @@ class Dice extends Component{
   render(){
     return(
       <div>
-        <h1>Dice Component</h1>
+        <h3 class="center">Dice Component</h3>
         <div class="dice">
           <h1>{this.props.roll}</h1>
         </div>

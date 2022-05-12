@@ -44,8 +44,8 @@ class App extends Component {
   render(){
     console.log(this.state.diceResult)
     return(
-      <div>
-        <h1>Dice Roller!</h1>
+      <div Id="color">
+        <h1 class="center">Dice Roller!</h1>
         <Roll rollLog={ this.state.rollLog } />
         <Dice roll={ this.state.diceResult } />
         <br />

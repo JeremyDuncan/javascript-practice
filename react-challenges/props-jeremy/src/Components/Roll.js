@@ -26,10 +26,10 @@ class Roll extends Component{
     
     return(
       <div>
-        <h1>Roll Component</h1>
-       
-       <h3>{ this.props.rollLog }</h3>
-        
+        <h3 class="center">Roll Component</h3>
+        <div class="log">
+          <h2>{ this.props.rollLog }</h2>
+        </div>
 
       </div>
     )
