@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+// ## Challenge
+// As a developer, I am tasked with creating a food ordering application in React. This is the first iteration of an application that is going to be much larger in the future, so I am tasked with creating a solid foundation from which the code base can grow.
+
+// - As a user, I can see an application that has a list of food items and the price of each item
+// - As a user, I can select an item I wish to order
+// - As a user, I can see the items I have selected displayed on the page
+
+// #### Stretch Challenges
+// - As a user, I can see the total cost of my current order
+// - As a user, I can see both the base total of my food selections and the total that includes sales tax
+// - As a user, I can see the total that includes sales tax rounded to two decimals
+// - As a user, I can see an image of my food selection on the menu
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props) 
+    this.state = {
+    }
+
+  }
+ 
+
+  render(){
+    return(
+      <div>
+      </div>
+    )
+  }
 }
+
 
 export default App;
