@@ -40,6 +40,9 @@ class App extends Component {
     this.logRoll(diceRoll)
     this.setState({diceResult: diceRoll })
   }
+  clearLog = () => {
+    this.setState({ rollLog: []})
+  }
 
   render(){
     console.log(this.state.diceResult)
@@ -51,6 +54,10 @@ class App extends Component {
         <br />
         <button class="but" onClick={this.rollDie}>
           Roll the Dice!
+        </button>
+        <br />
+        <button class="but" onClick={this.clearLog }>
+          Reset
         </button>
       </div>
     )
