@@ -20,19 +20,38 @@
 import React, { Component } from 'react'
 import Dice from './Components/Dice'
 import Roll from './Components/Roll'
+import './App.css'
 class App extends Component {
   constructor(props) {
     super(props) 
     this.state = {
-     
+      diceResult: 0,
+      rollLog: []
     }
+
   }
+
+  logRoll = (roll) => {
+    this.setState({ rollLog: [...this.state.rollLog, roll] })
+  }
+
+  rollDie = () => {
+    var diceRoll = Math.floor(Math.random() * 6) + 1;
+    this.logRoll(diceRoll)
+    this.setState({diceResult: diceRoll })
+  }
+
   render(){
+    console.log(this.state.diceResult)
     return(
       <div>
         <h1>Dice Roller!</h1>
-        <Roll/>
-        <Dice/>
+        <Roll rollLog={ this.state.rollLog } />
+        <Dice roll={ this.state.diceResult } />
+        <br />
+        <button class="but" onClick={this.rollDie}>
+          Roll the Dice!
+        </button>
       </div>
     )
   }
