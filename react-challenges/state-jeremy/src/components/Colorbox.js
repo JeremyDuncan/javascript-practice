@@ -60,7 +60,7 @@ class Colorbox extends Component{
     var {count} = this.state
     return( // Displays box with background color // calls changeColor() to change {box} color
       <>
-      <div class="App" id="Square">
+      <div className="App" id="Square">
       <h1>{box}</h1>
       </div>                  
       <button onClick = {this.changeColor}>Press me!</button>   

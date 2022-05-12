@@ -25,7 +25,7 @@ class App extends Component {
 
   // Adds new <Colorbox/> Module to this.state.boxes[] Array for every call 
   addBox = () => {
-   var  box = <Colorbox/>
+   var  box = <Colorbox key={this.state.currentBoxes}/>
    this.setState({ boxes: [...this.state.boxes, box], currentBoxes: this.state.currentBoxes + 1 });
   }
 
