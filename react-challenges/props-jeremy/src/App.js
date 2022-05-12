@@ -1,10 +1,6 @@
 // ## Challenge: Dice Roller
 
-// Using a well thought out state tree and nested component structure, construct an application that rolls a die and keeps track of the numbers rolled.  Here is a wireframe to help you start planning your application:
-
-// ![dice game](./assets/dice-game.png)
-
-//! - As a user, I can see an application called Dice Roller 
+//  - As a user, I can see an application called Dice Roller 
 //  - As a developer, I can create a React application with `App.js` as my stateful component
 //  - As a developer, I can create two child components that will accept props from `App.js`
 //  - As a user, I can click a box and see the outcome of my current "roll"
@@ -30,32 +26,45 @@ class App extends Component {
     }
 
   }
-
-  logRoll = (roll) => {
-    this.setState({ rollLog: [...this.state.rollLog, roll] })
+  // Called by rollDie()
+  // Creates new array with new roll added to it
+  logRoll = (diceRollToLog) => {
+    this.setState({ rollLog: [...this.state.rollLog, diceRollToLog] })
   }
 
+  // Called by buttonClick "Roll the Dice!"
+  // Send dice roll to diceResult to be displayed
   rollDie = () => {
+    // Stores random number 1-6 in diceRoll
     var diceRoll = Math.floor(Math.random() * 6) + 1;
+    // Sends random number to logRoll to be stored in rollLog
     this.logRoll(diceRoll)
     this.setState({diceResult: diceRoll })
   }
+  // Clears rollLog when button "Reset" is pressed
   clearLog = () => {
     this.setState({ rollLog: []})
   }
 
   render(){
-    console.log(this.state.diceResult)
     return(
       <div Id="color">
         <h1 class="center">Dice Roller!</h1>
-        <Roll rollLog={ this.state.rollLog } />
-        <Dice roll={ this.state.diceResult } />
+
+        {/*Stores rollLog value into rollLog for Roll*/}
+        <Roll rollLog={ this.state.rollLog } /> 
+        
+        {/*Stores diceResult value into roll for Dice*/}
+        <Dice roll={ this.state.diceResult } /> 
         <br />
+
+        {/*//Calls rollDie() => logRoll*/}
         <button class="but" onClick={this.rollDie}>
           Roll the Dice!
         </button>
         <br />
+
+        {/*//Calls clearLog()*/}
         <button class="but" onClick={this.clearLog }>
           Reset
         </button>
