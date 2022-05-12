@@ -12,7 +12,8 @@
 // - As a user, I can see an image of my food selection on the menu
 
 import './App.css';
-
+import React, { Component } from 'react'
+import FoodList from './components/FoodList'
 class App extends Component {
   constructor(props) {
     super(props) 
@@ -25,6 +26,9 @@ class App extends Component {
   render(){
     return(
       <div>
+        <h1>Food List</h1>
+        <FoodList/>
+        
       </div>
     )
   }
