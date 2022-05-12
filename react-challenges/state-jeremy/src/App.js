@@ -36,7 +36,6 @@ class App extends Component {
   }
 
   render() {
-    {var count = this.state.currentBoxes}
     return (
       <div>
         { this.state.boxes }
@@ -49,7 +48,7 @@ class App extends Component {
 
         {/* Button calls removeBox() if count > -1 */}
         {/* Removes 1 <Colorbox/> Component per click */}
-        <button onClick={count > -1 ? this.removeBox: null}>  
+        <button onClick={this.state.currentBoxes > -1 ? this.removeBox: null}>  
           - Remove Box                                        
         </button>                   
       </div>
