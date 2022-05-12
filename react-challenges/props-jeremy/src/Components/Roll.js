@@ -16,25 +16,19 @@ class Roll extends Component{
   constructor(props) {
     super(props) 
     this.state = {
-      diceResult: 0
     }
   }
   
-  rollDice = () => {
 
-    this.setState({diceResult: 3 })
-  }
   
   render(){
-    
-    {console.log(this.state.diceResult)}
 
+    
     return(
       <div>
         <h1>Roll Component</h1>
-        <button onClick={this.rollDice}>
-          Roll Dice!
-        </button>
+        <h2>Shows the results of all your rolls.</h2>
+
       </div>
     )
   }
