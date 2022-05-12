@@ -27,7 +27,9 @@ class Roll extends Component{
     return(
       <div>
         <h1>Roll Component</h1>
-        <h2>Shows the results of all your rolls.</h2>
+       
+       <h3>{ this.props.rollLog }</h3>
+        
 
       </div>
     )
