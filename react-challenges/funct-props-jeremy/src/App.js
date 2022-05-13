@@ -27,10 +27,16 @@ class App extends Component {
       selectedFood: [],
       i: 0, //index for prices
       total: 0, //total price
-      foodImages: foodImage // imported images in array
+      foodImages: foodImage, // imported images in array
+      selectionCount: 0
     }
   }
- 
+  // Called when food select reaches limit.
+  // clears the displayed food items.
+  clearSelections = () => {
+    this.setState({selectedFood: [], selectionCount: 0})
+  }
+
   resetList = () => {
     this.setState({ selectedFood: [], total: 0 })
   }
@@ -40,14 +46,21 @@ class App extends Component {
   }
 
   addFood = (foodItem, index) => {
-    // Calls getSubtotal() when button is clicked
-    this.getSubtotal(this.state.price[index])
-    // Adds selected food, price, and image of food to selectedFood Array
-    this.setState({ selectedFood: 
-      [...this.state.selectedFood, 
-        foodItem + " $" + this.state.price[index], //food + $ cost
-        <img className="round" src={foodImage[foodItem]} width="50" height="50"/> //foood image
-      ]})
+    // Calls clearSelection once count reaches over 13
+    if (this.state.selectionCount > 13){
+      this.clearSelections()
+    } else {
+      // Calls getSubtotal() when button is clicked
+      this.getSubtotal(this.state.price[index])
+      // Adds selected food, price, and image of food to selectedFood Array
+      this.setState({ selectedFood: 
+        [...this.state.selectedFood, 
+          foodItem + " $" + this.state.price[index], //food + $ cost
+          <img className="round" src={foodImage[foodItem]} width="50" height="50"/>, //foood image
+        ], 
+        selectionCount: this.state.selectionCount + 1
+      })
+    }
   }
  
   render(){
