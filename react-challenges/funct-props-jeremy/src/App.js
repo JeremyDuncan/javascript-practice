@@ -14,20 +14,40 @@
 import './App.css';
 import React, { Component } from 'react'
 import FoodList from './components/FoodList'
+import SelectedFood from './components/SelectedFood';
 class App extends Component {
   constructor(props) {
     super(props) 
     this.state = {
+      food: ["Steak", "Hamburger", "Pizza Slice", "Taco", "Curry"],
+      price:["$25.99", "$9.99", "$4.99", "$3.99", "$12.99"],
+      selectedFood: [],
+      i: 0
     }
 
   }
  
-
+  addFood = (foodItem, index) => {
+    alert(foodItem + index)
+    this.setState({ selectedFood: [...this.state.selectedFood, foodItem + " " + this.state.price[index]] } )
+  }
+ 
   render(){
     return(
       <div>
         <h1>Food List</h1>
-        <FoodList/>
+        <h2>Choose from the following foods</h2>
+        <FoodList 
+          food={this.state.food} 
+          price={this.state.price} 
+          addFood={this.addFood}
+        />
+        <h1>Selected Food</h1>
+        <SelectedFood 
+          choices={this.state.selectedFood}
+          price={this.state.price[this.state.i]} 
+        
+        />
         
       </div>
     )
