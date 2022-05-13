@@ -5,11 +5,9 @@ class SelectedFood extends Component {
       <div>
         <h1>Selected Food</h1>
         <ul>
+          {/* Outputs Food, Price, and images stored in selectedFood Array (choice) */}
           {this.props.choices.map((choice, index) => {
-            return <li key={index}>
-              {choice}
-              <img src={require('../images/Pizza.jpg')}height={50} width={50}/>
-              </li>
+            return <li key={index}>{choice}</li>
             })}
         </ul>
       </div>
