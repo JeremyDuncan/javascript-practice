@@ -40,21 +40,32 @@ class App extends Component {
  
   render(){
     return(
-      <div>
-        <h1>Food List</h1>
-        <h2>Choose from the following foods</h2>
-        <FoodList 
-          food={this.state.food} 
-          price={this.state.price} 
-          addFood={this.addFood}
-        />
-        <SelectedFood 
-          choices={this.state.selectedFood}
-          price={this.state.price[this.state.i]} 
-        />
-        <Total
-          subtotal={this.state.total} 
-        />
+      <div className="container">
+
+        <div className="foodlist">
+          <div className="column">
+          <h1>Food List</h1>
+          <h2>Choose from the following foods</h2>
+          
+          
+          <FoodList 
+            food={this.state.food} 
+            price={this.state.price} 
+            addFood={this.addFood}
+          />
+          </div>
+        </div>
+        
+          <SelectedFood 
+            choices={this.state.selectedFood}
+            price={this.state.price[this.state.i]} 
+          />
+        
+          <div className="foodlist">
+          <Total
+            subtotal={this.state.total} 
+          />
+        </div>
         
       </div>
     )

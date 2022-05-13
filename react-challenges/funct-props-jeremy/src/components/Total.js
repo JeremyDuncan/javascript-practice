@@ -5,7 +5,7 @@ class Total extends Component {
     return(
       <div>
 
-        <h1>Subtotal</h1>
+        <h1 id="app-header">Subtotal</h1>
         <ul>
           {"$ " + this.props.subtotal.toFixed(2)}
         </ul>
@@ -14,7 +14,7 @@ class Total extends Component {
         <ul>
           {"$ " + ((this.props.subtotal * .07 ) + this.props.subtotal).toFixed(2)}
         </ul>
-        
+
       </div>
     )
   }

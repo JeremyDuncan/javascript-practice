@@ -4,14 +4,15 @@ class SelectedFood extends Component {
   render(){
     return(
       <div>
+        <div className="foodlist">
+            <h1>Selected Food</h1>
+          <ul>
+            {this.props.choices.map((choice, index) => {
+              return <li key={index}>{choice}</li>
+              })}
+          </ul>
+        </div>
 
-        <h1>Selected Food</h1>
-        <ul>
-          {this.props.choices.map((choice, index) => {
-            return <li key={index}>{choice}</li>
-            })}
-        </ul>
-        
       </div>
     )
   }
