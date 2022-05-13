@@ -31,6 +31,10 @@ class App extends Component {
     }
   }
  
+  resetList = () => {
+    this.setState({ selectedFood: [], total: 0 })
+  }
+
   getSubtotal = (price) => {
     this.setState({ total: this.state.total + price})
   }
@@ -49,6 +53,9 @@ class App extends Component {
   render(){
     return(
       <div>
+        {/*Resets selected food, Subtotal, and Grandtotal*/}
+        <button onClick={this.resetList}>Reset</button>
+
         <FoodList 
           food={this.state.food} 
           price={this.state.price} 
