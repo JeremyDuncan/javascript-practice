@@ -16,8 +16,7 @@ import React, { Component } from 'react'
 import FoodList from './components/FoodList'
 import SelectedFood from './components/SelectedFood';
 import Total from './components/Total'
-import foodImage from './components/Images'
-
+import foodImage  from './components/Images'
 
 class App extends Component {
   constructor(props) {
@@ -27,7 +26,8 @@ class App extends Component {
       price:[25.99, 9.99, 14.99, 3.99, 12.99],
       selectedFood: [],
       i: 0, //index for prices
-      total: 0 // Total price
+      total: 0, //total price
+      foodImages: foodImage // imported images in array
     }
   }
  
@@ -53,6 +53,7 @@ class App extends Component {
           food={this.state.food} 
           price={this.state.price} 
           addFood={this.addFood}
+          img={this.state.foodImages}
         />
         <SelectedFood 
           choices={this.state.selectedFood}
