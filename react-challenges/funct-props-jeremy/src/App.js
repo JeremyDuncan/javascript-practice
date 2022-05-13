@@ -22,8 +22,8 @@ class App extends Component {
   constructor(props) {
     super(props) 
     this.state = {
-      food: ["Steak", "Burger", "Pizza", "Taco", "Curry"],
-      price:[25.99, 9.99, 14.99, 3.99, 12.99],
+      food: ["Steak", "Burger", "Pizza", "Taco", "Curry", "Soup", "Salad", "Pie"],
+      price:[25.99, 9.99, 14.99, 3.99, 12.99, 2.99, 6.99, 1.99],
       selectedFood: [],
       i: 0, //index for prices
       total: 0, //total price
@@ -32,7 +32,7 @@ class App extends Component {
     }
   }
   // Called when food select reaches limit.
-  // clears the displayed food items.
+  // which clears the displayed food items.
   clearSelections = () => {
     this.setState({selectedFood: [], selectionCount: 0})
   }
