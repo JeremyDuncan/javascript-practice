@@ -14,7 +14,10 @@ class FoodList extends Component {
                 {/* Returns selection to App.js to be stored in selectFood Array*/}
               <button  onClick={() => this.props.addFood(foodItem, index)}>
                 {foodItem} {this.props. price[index]} 
+                <br/>
+                <img src={this.props.img[foodItem]} width="150" height="150"/>
               </button>
+              
               </li>
             })}
         </ul>
