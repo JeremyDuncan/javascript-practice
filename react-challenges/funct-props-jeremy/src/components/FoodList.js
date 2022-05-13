@@ -4,6 +4,7 @@ class FoodList extends Component {
   render(){
     return(
       <div>
+
         <ul>
           {this.props.food.map((foodItem, index) => {
             return <li key={index}>
@@ -11,6 +12,7 @@ class FoodList extends Component {
               </li>
             })}
         </ul>
+        
       </div>
     )
   }

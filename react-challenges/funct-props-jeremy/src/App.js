@@ -15,21 +15,27 @@ import './App.css';
 import React, { Component } from 'react'
 import FoodList from './components/FoodList'
 import SelectedFood from './components/SelectedFood';
+import Total from './components/Total'
+
 class App extends Component {
   constructor(props) {
     super(props) 
     this.state = {
       food: ["Steak", "Hamburger", "Pizza Slice", "Taco", "Curry"],
-      price:["$25.99", "$9.99", "$4.99", "$3.99", "$12.99"],
+      price:[25.99, 9.99, 4.99, 3.99, 12.99],
       selectedFood: [],
-      i: 0
+      i: 0, //index for prices
+      total: 0 // Total price
     }
-
   }
  
+  getSubtotal = (price) => {
+    this.setState({ total: this.state.total + price})
+  }
+
   addFood = (foodItem, index) => {
-    alert(foodItem + index)
-    this.setState({ selectedFood: [...this.state.selectedFood, foodItem + " " + this.state.price[index]] } )
+    this.getSubtotal(this.state.price[index])
+    this.setState({ selectedFood: [...this.state.selectedFood, foodItem + " $" + this.state.price[index]] } )
   }
  
   render(){
@@ -42,11 +48,12 @@ class App extends Component {
           price={this.state.price} 
           addFood={this.addFood}
         />
-        <h1>Selected Food</h1>
         <SelectedFood 
           choices={this.state.selectedFood}
           price={this.state.price[this.state.i]} 
-        
+        />
+        <Total
+          subtotal={this.state.total} 
         />
         
       </div>
