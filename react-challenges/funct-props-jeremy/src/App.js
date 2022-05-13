@@ -22,7 +22,7 @@ class App extends Component {
   constructor(props) {
     super(props) 
     this.state = {
-      food: ["Steak", "Hamburger", "Pizza", "Taco", "Curry"],
+      food: ["Steak", "Burger", "Pizza", "Taco", "Curry"],
       price:[25.99, 9.99, 14.99, 3.99, 12.99],
       selectedFood: [],
       i: 0, //index for prices
@@ -46,29 +46,38 @@ class App extends Component {
     this.setState({ selectedFood: 
       [...this.state.selectedFood, 
         foodItem + " $" + this.state.price[index], //food + $ cost
-        <img src={foodImage[foodItem]} width="75" height="75"/> //foood image
+        <img className="round" src={foodImage[foodItem]} width="50" height="50"/> //foood image
       ]})
   }
  
   render(){
     return(
-      <div>
+      <div className="App">
         {/*Resets selected food, Subtotal, and Grandtotal*/}
         <button onClick={this.resetList}>Reset</button>
-
-        <FoodList 
-          food={this.state.food} 
-          price={this.state.price} 
-          addFood={this.addFood}
-          img={this.state.foodImages}
-        />
-        <SelectedFood 
-          choices={this.state.selectedFood}
-          price={this.state.price[this.state.i]} 
-        />
-        <Total
-          subtotal={this.state.total} 
-        />
+        <div className="titleContainer">
+          <h1>Food List</h1>
+          <div className="directionsContainer">
+            <h2>Select Your Food</h2>
+          </div>
+        </div>
+          <div className="foodContainer">
+            <FoodList 
+              food={this.state.food} 
+              price={this.state.price} 
+              addFood={this.addFood}
+              img={this.state.foodImages}
+            />
+            <SelectedFood 
+              choices={this.state.selectedFood}
+              price={this.state.price[this.state.i]} 
+            />
+          </div>
+        <div className="totalContainer">
+          <Total
+            subtotal={this.state.total} 
+          />
+        </div>
       </div>
     )
   }
