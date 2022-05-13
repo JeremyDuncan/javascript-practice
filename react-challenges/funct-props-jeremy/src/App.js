@@ -16,13 +16,15 @@ import React, { Component } from 'react'
 import FoodList from './components/FoodList'
 import SelectedFood from './components/SelectedFood';
 import Total from './components/Total'
+import foodImage from './components/Images'
+
 
 class App extends Component {
   constructor(props) {
     super(props) 
     this.state = {
-      food: ["Steak", "Hamburger", "Pizza Slice", "Taco", "Curry"],
-      price:[25.99, 9.99, 4.99, 3.99, 12.99],
+      food: ["Steak", "Hamburger", "Pizza", "Taco", "Curry"],
+      price:[25.99, 9.99, 14.99, 3.99, 12.99],
       selectedFood: [],
       i: 0, //index for prices
       total: 0 // Total price
@@ -34,43 +36,34 @@ class App extends Component {
   }
 
   addFood = (foodItem, index) => {
+    // Calls getSubtotal() when button is clicked
     this.getSubtotal(this.state.price[index])
-    this.setState({ selectedFood: [...this.state.selectedFood, foodItem + " $" + this.state.price[index]] } )
+    // Adds selected food, price, and image of food to selectedFood Array
+    this.setState({ selectedFood: 
+      [...this.state.selectedFood, 
+        foodItem + " $" + this.state.price[index], //food + $ cost
+        <img src={foodImage[foodItem]} width="75" height="75"/> //foood image
+      ]})
   }
  
   render(){
     return(
-      <div className="container">
-
-        <div className="foodlist">
-          <div className="column">
-          <h1>Food List</h1>
-          <h2>Choose from the following foods</h2>
-          
-          
-          <FoodList 
-            food={this.state.food} 
-            price={this.state.price} 
-            addFood={this.addFood}
-          />
-          </div>
-        </div>
-        
-          <SelectedFood 
-            choices={this.state.selectedFood}
-            price={this.state.price[this.state.i]} 
-          />
-        
-          <div className="foodlist">
-          <Total
-            subtotal={this.state.total} 
-          />
-        </div>
-        
+      <div>
+        <FoodList 
+          food={this.state.food} 
+          price={this.state.price} 
+          addFood={this.addFood}
+        />
+        <SelectedFood 
+          choices={this.state.selectedFood}
+          price={this.state.price[this.state.i]} 
+        />
+        <Total
+          subtotal={this.state.total} 
+        />
       </div>
     )
   }
 }
-
 
 export default App;
