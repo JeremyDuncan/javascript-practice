@@ -3,7 +3,8 @@ class GoodRobot extends Component {
   render(){
     return(
       <div>
-          <h2>I hear you say {this.props.userInput}? Is that Correct?</h2>
+          <h1>GOOD ROBOT:</h1>
+          <h2>I hear you say {this.props.userInput}? Is that correct?</h2>
       </div>
     )
   }

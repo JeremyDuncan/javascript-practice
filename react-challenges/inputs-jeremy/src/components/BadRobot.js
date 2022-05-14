@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 class BadRobot extends Component {
   render(){
-    
+
     var blah = "";
     var count = 0;
     var robotBlab = "BLABL"
@@ -17,7 +17,8 @@ class BadRobot extends Component {
 
     return(
       <div>
-          <h2>I hear you say {blah}? Is that Correct?</h2>
+          <h1>BAD ROBOT:</h1>
+          <h2>I hear you say {blah}? Is that correct?</h2>
       </div>
     )
   }
