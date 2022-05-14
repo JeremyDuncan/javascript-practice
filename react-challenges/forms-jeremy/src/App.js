@@ -78,6 +78,12 @@ class App extends Component {
               value={this.state.adjective[1]} 
             />
           </form>
+          
+          <input
+            type="submit"
+            value="Submit Form"
+            onClick={ this.handleSubmit }
+          />
         </React.Fragment>
       </div>
     )
