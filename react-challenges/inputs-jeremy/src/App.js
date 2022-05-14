@@ -1,7 +1,7 @@
 // Challenge: Listening Robot
 // Active Listening Robot Challenge
 
-// As a user, I can see a page with a text input.
+    // As a user, I can see a page with a text input.
 // As a developer, I have one parent component that holds state (logic or smart component).
 // As a developer, I have an input in my parent component.
 // As a user, I see titles of three robots waiting for my text.
@@ -16,28 +16,24 @@
 // As a user, I see a third robot that is the developer's choice.
 
 
-import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props) 
+    this.state = {
+    }
+  }
+
+  render(){
+    return(
+      <div>
+        <input type="text"/>
+    
+      </div>
+    )
+  }
 }
 
 export default App;
