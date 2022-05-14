@@ -18,6 +18,9 @@
 
 import './App.css';
 import React, { Component } from 'react'
+import GoodRobot from './components/GoodRobot'
+import BadRobot from './components/BadRobot'
+import KanyeRobot from './components/KanyeRobot'
 
 class App extends Component {
   constructor(props) {
@@ -30,8 +33,10 @@ class App extends Component {
   render(){
     return(
       <div>
-        <input type="text" value={this.state.userInput}/>
-    
+          <input type="text" value={this.state.userInput}/>
+          <GoodRobot/>
+          <BadRobot/>
+          <KanyeRobot/>
       </div>
     )
   }
