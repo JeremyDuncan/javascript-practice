@@ -25,25 +25,33 @@ class App extends Component {
   render(){
     return(
       <div className="App App-header">
-        <h5>Noun</h5>
+        <React.Fragment>
+        <form>
+        <label>Noun</label>
         <input type="text" value={this.state.noun[0]} />
-        <h5>Noun</h5>
+        <br/>
+        <label>Noun</label>
         <input type="text" value={this.state.noun[1]} />
-        <h5>Noun</h5>
+        <br/>
+        <label>Noun</label>
         <input type="text" value={this.state.noun[2]} />
-        <h5>Noun</h5>
+        <br/>
+        <label>Noun</label>
         <input type="text" value={this.state.noun[3]} />
         <br/>
-        <h5>Verb</h5>
+        <label>Verb</label>
         <input type="text" value={this.state.verb[0]} />
-        <h5>Verb</h5>
+        <br/>
+        <label>Verb</label>
         <input type="text" value={this.state.verb[1]} />
         <br/>
-        <h5>Adjective</h5>
+        <label>Adjective</label>
         <input type="text" value={this.state.adjective[0]} />
-        <h5>Adjective</h5>
+        <br/>
+        <label>Adjective</label>
         <input type="text" value={this.state.adjective[1]} />
-
+        </form>
+        </React.Fragment>
       </div>
     )
   }
