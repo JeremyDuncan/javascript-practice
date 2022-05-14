@@ -1,26 +1,26 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 class BadRobot extends Component {
-  render(){
-
+  render() {
     var blah = "";
     var count = 0;
-    var robotBlab = "BLABL"
+    var robotBlab = "BLABL";
 
-    for (var i = 0; i < this.props.userInput.length; i++){
-      //robotLang()
-      if(count > 4) {
+    // For every character typed,
+    // change character to coresponding letter in "BLABL"
+    for (var i = 0; i < this.props.userInput.length; i++) {
+      if (count > 4) { // Cycles through robotBlab string
         count = 0;
       }
       blah += robotBlab[count];
-      count++
+      count++;
     }
 
-    return(
+    return (
       <div>
-          <h1>BAD ROBOT:</h1>
-          <h2>I hear you say {blah}? Is that correct?</h2>
+        <h1>BAD ROBOT:</h1>
+        <h2>I hear you say {blah}? Is that correct?</h2>
       </div>
-    )
+    );
   }
 }
 
