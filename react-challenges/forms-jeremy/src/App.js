@@ -25,32 +25,59 @@ class App extends Component {
   render(){
     return(
       <div className="App App-header">
+
         <React.Fragment>
-        <form>
-        <label>Noun</label>
-        <input type="text" value={this.state.noun[0]} />
-        <br/>
-        <label>Noun</label>
-        <input type="text" value={this.state.noun[1]} />
-        <br/>
-        <label>Noun</label>
-        <input type="text" value={this.state.noun[2]} />
-        <br/>
-        <label>Noun</label>
-        <input type="text" value={this.state.noun[3]} />
-        <br/>
-        <label>Verb</label>
-        <input type="text" value={this.state.verb[0]} />
-        <br/>
-        <label>Verb</label>
-        <input type="text" value={this.state.verb[1]} />
-        <br/>
-        <label>Adjective</label>
-        <input type="text" value={this.state.adjective[0]} />
-        <br/>
-        <label>Adjective</label>
-        <input type="text" value={this.state.adjective[1]} />
-        </form>
+          <form>
+            <label>Noun</label>
+            <input  
+              type="text" 
+              value={this.state.noun[0]}
+            />
+            <br/>
+            <label>Noun</label>
+            <input 
+              type="text" 
+              value={this.state.noun[1]} 
+            />
+            <br/>
+            <label>Noun</label>
+            <input 
+              type="text" 
+              value={this.state.noun[2]} 
+            />
+            <br/>
+            <label>Noun</label>
+            <input 
+              type="text" 
+              value={this.state.noun[3]} 
+            />
+
+            <br/>
+            <label>Verb</label>
+            <input 
+              type="text" 
+              value={this.state.verb[0]} 
+            />
+            <br/>
+            <label>Verb</label>
+            <input 
+              type="text" 
+              value={this.state.verb[1]} 
+            />
+
+            <br/>
+            <label>Adjective</label>
+            <input 
+              type="text" 
+              value={this.state.adjective[0]} 
+            />
+            <br/>
+            <label>Adjective</label>
+            <input 
+              type="text" 
+              value={this.state.adjective[1]} 
+            />
+          </form>
         </React.Fragment>
       </div>
     )
