@@ -37,7 +37,7 @@ class App extends Component {
 
   render(){
     return(
-      <div className="App">
+      <div className="App App-header">
           <input type="text" value={this.state.userInput} onChange={this.handleChange}/>
           <GoodRobot userInput={this.state.userInput}/>
           <br/>
