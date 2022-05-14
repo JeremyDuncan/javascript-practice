@@ -26,7 +26,7 @@ class App extends Component {
   constructor(props) {
     super(props) 
     this.state = {
-      userInput: "state data"
+      userInput: "XXXXXXXXX :)"
     }
   }
 
@@ -34,9 +34,9 @@ class App extends Component {
     return(
       <div>
           <input type="text" value={this.state.userInput}/>
-          <GoodRobot/>
-          <BadRobot/>
-          <KanyeRobot/>
+          <GoodRobot userInput={this.state.userInput}/>
+          <BadRobot userInput={this.state.userInput}/>
+          <KanyeRobot userInput={this.state.userInput}/>
       </div>
     )
   }
