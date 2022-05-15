@@ -41,7 +41,7 @@ class Form extends Component {
 
   render(){
     return(
-      <div className="App-header">
+      <div>
 
         <React.Fragment>
           <form>

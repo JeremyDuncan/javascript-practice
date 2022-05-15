@@ -26,21 +26,21 @@ class App extends Component {
 
   render(){
     return(
-      <div className="App-header">
+      <div>
 
         <Form handleFormSubmit={ this.handleFormSubmit } />
             { this.state.form &&
               <div>
-                noun: { this.state.form.noun1 }
-                noun: { this.state.form.noun2 }
-                noun: { this.state.form.noun3 }
-                noun: { this.state.form.noun4 }
+                noun: { this.state.form.noun1 + " "}
+                noun: { this.state.form.noun2 + " " }
+                noun: { this.state.form.noun3 + " "}
+                noun: { this.state.form.noun4 + " "}
                 <br />
-                verb: { this.state.form.verb1}
-                verb: { this.state.form.verb2}
+                verb: { this.state.form.verb1 + " "}
+                verb: { this.state.form.verb2 + " "}
                 <br />
-                adjective: { this.state.form.adjective1 }
-                adjective: { this.state.form.adjective2 }
+                adjective: { this.state.form.adjective1 + " "}
+                adjective: { this.state.form.adjective2 + " " }
               </div>
             }
       </div>
