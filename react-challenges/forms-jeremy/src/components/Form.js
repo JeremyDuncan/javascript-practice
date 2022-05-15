@@ -27,15 +27,16 @@ class Form extends Component {
       }
     }
   }
-  handleSubmit = () => {
-    
-  }
 
   handleChange = (e) => {
     const { form } = this.state
     form[e.target.name] = e.target.value
     this.setState({ form: form})
   }
+
+  handleSubmit = () => {
+    this.props.handleFormSubmit(this.state.form); 
+   }
 
   render(){
     return(

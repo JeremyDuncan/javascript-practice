@@ -21,13 +21,21 @@ class App extends Component {
       }
     }
   }
+  
+  handleFormSubmit = (formData) => {
+    alert
+    this.setState({ form: formData });
+  }
+
+
 
 
   render(){
     return(
       <div className="App-header">
 
-        <Form />
+        <Form handleFormSubmit={this.handleFormSubmit}/>
+        
       </div>
     )
   }
