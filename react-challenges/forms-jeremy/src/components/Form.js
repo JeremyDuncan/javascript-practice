@@ -34,7 +34,8 @@ class Form extends Component {
     this.setState({ form: form})
   }
 
-  handleSubmit = () => {
+  handleSubmit = (e) => {
+    e.preventDefault() // Prevent page refresh after submit
     this.props.handleFormSubmit(this.state.form); 
    }
 

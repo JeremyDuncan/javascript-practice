@@ -16,25 +16,33 @@ class App extends Component {
   constructor(props) {
     super(props) 
     this.state = {
-      form: {
-      
-      }
+      form: {}
     }
   }
   
   handleFormSubmit = (formData) => {
     this.setState({ form: formData });
-  }
-
-
-
+  };
 
   render(){
     return(
       <div className="App-header">
 
-        <Form handleFormSubmit={this.handleFormSubmit}/>
-        
+        <Form handleFormSubmit={ this.handleFormSubmit } />
+            { this.state.form &&
+              <div>
+                noun: { this.state.form.noun1 }
+                noun: { this.state.form.noun2 }
+                noun: { this.state.form.noun3 }
+                noun: { this.state.form.noun4 }
+                <br />
+                verb: { this.state.form.verb1}
+                verb: { this.state.form.verb2}
+                <br />
+                adjective: { this.state.form.adjective1 }
+                adjective: { this.state.form.adjective2 }
+              </div>
+            }
       </div>
     )
   }
