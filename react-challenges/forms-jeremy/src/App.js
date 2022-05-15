@@ -11,80 +11,23 @@
 
 import './App.css';
 import React, { Component } from 'react'
-
+import Form from './components/Form'
 class App extends Component {
   constructor(props) {
     super(props) 
     this.state = {
-      noun: [1, 2, 3, 4, 5],
-      verb:[1, 2, 3, 4],
-      adjective:[1, 2, 3, 4, 5]
+      form: {
+      
+      }
     }
   }
 
+
   render(){
     return(
-      <div className="App App-header">
+      <div className="App-header">
 
-        <React.Fragment>
-          <form>
-            <label>Noun</label>
-            <input  
-              type="text" 
-              value={this.state.noun[0]}
-            />
-            <br/>
-            <label>Noun</label>
-            <input 
-              type="text" 
-              value={this.state.noun[1]} 
-            />
-            <br/>
-            <label>Noun</label>
-            <input 
-              type="text" 
-              value={this.state.noun[2]} 
-            />
-            <br/>
-            <label>Noun</label>
-            <input 
-              type="text" 
-              value={this.state.noun[3]} 
-            />
-
-            <br/>
-            <label>Verb</label>
-            <input 
-              type="text" 
-              value={this.state.verb[0]} 
-            />
-            <br/>
-            <label>Verb</label>
-            <input 
-              type="text" 
-              value={this.state.verb[1]} 
-            />
-
-            <br/>
-            <label>Adjective</label>
-            <input 
-              type="text" 
-              value={this.state.adjective[0]} 
-            />
-            <br/>
-            <label>Adjective</label>
-            <input 
-              type="text" 
-              value={this.state.adjective[1]} 
-            />
-          </form>
-          
-          <input
-            type="submit"
-            value="Submit Form"
-            onClick={ this.handleSubmit }
-          />
-        </React.Fragment>
+        <Form />
       </div>
     )
   }
