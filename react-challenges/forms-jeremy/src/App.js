@@ -16,33 +16,47 @@ class App extends Component {
   constructor(props) {
     super(props) 
     this.state = {
-      form: {}
+      form: {
+        noun1: "_____",
+        noun2: "_____",
+        noun3: "_____",
+        noun4: "_____",
+        verb1: "_____",
+        verb2: "_____",
+        adjective1: "_____",
+        adjective2: "_____"
+      }
     }
   }
-  
+
+
   handleFormSubmit = (formData) => {
     this.setState({ form: formData });
   };
 
   render(){
+    {this.noun1 = this.state.form.noun1}
+    {this.noun2 = this.state.form.noun2}
+    {this.noun3 = this.state.form.noun3}
+    {this.noun4 = this.state.form.noun4}
+
+    {this.verb1 = this.state.form.verb1}
+    {this.verb2 = this.state.form.verb2}
+
+    {this.adjective1 = this.state.form.adjective1}
+    {this.adjective2 = this.state.form.adjective2}
+
     return(
       <div>
-
+        
         <Form handleFormSubmit={ this.handleFormSubmit } />
+        <button onClick={() => window.location.reload()}>Clear</button>
             { this.state.form &&
               <div>
-                noun: { this.state.form.noun1 + " "}
-                noun: { this.state.form.noun2 + " " }
-                noun: { this.state.form.noun3 + " "}
-                noun: { this.state.form.noun4 + " "}
-                <br />
-                verb: { this.state.form.verb1 + " "}
-                verb: { this.state.form.verb2 + " "}
-                <br />
-                adjective: { this.state.form.adjective1 + " "}
-                adjective: { this.state.form.adjective2 + " " }
+                <p> A {this.noun1} {this.verb1} around the {this.adjective1} {this.noun2} and {this.verb2}  up the street and gossiped with Mrs. Bilbo about {this.adjective2} {this.noun3}'s {this.noun4}. </p>
               </div>
             }
+            
       </div>
     )
   }
