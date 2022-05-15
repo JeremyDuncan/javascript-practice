@@ -47,14 +47,15 @@ class App extends Component {
     {this.adjective2 = this.state.form.adjective2}
 
     return(
-      <div>
-        
-        <Form handleFormSubmit={ this.handleFormSubmit } />
-        <button onClick={() => window.location.reload()}>Clear</button>
-            { this.state.form &&
-              <div>
-                <p> A {this.noun1} {this.verb1} around the {this.adjective1} {this.noun2} and {this.verb2}  up the street and gossiped with Mrs. Bilbo about {this.adjective2} {this.noun3}'s {this.noun4}. </p>
-              </div>
+      <div className="container">
+        <div className="left">
+          <Form handleFormSubmit={ this.handleFormSubmit } />
+        </div>
+          { this.state.form &&
+            <div className="right">
+              <p> A {this.noun1} {this.verb1} around the {this.adjective1} {this.noun2} and {this.verb2}  up the street and gossiped with Mrs. Bilbo about {this.adjective2} {this.noun3}'s {this.noun4}. </p>
+              <button onClick={() => window.location.reload()}>Clear</button>
+            </div>
             }
             
       </div>
