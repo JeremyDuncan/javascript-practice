@@ -23,7 +23,6 @@ class App extends Component {
   }
   
   handleFormSubmit = (formData) => {
-    alert
     this.setState({ form: formData });
   }
 
