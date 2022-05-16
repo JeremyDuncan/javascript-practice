@@ -16,7 +16,6 @@
 import './App.css';
 import React, { Component } from 'react'
 import LightSwitch from './components/LightSwitch'
-import switchImage from './components/SwitchImages'
 
 class App extends Component {
   constructor(props) {
