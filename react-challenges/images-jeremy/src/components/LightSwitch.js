@@ -1,7 +1,7 @@
 // Light Bulb Challenge
     // As a user, I can see a square on the screen with the word off in the middle.
     // As a user, when I click the square the word toggle from "off" to "on" and then back "off" again.
-// As a user, when I click the box the color goes from white to yellow. The words "on" or "off" are still displayed in the box.
+  // As a user, when I click the box the color goes from white to yellow. The words "on" or "off" are still displayed in the box.
 // As a user, instead of seeing a box, I see a picture of a light switch in the "off" position.
 // As a user, when I click on the light switch it turns "on".
 // As a user, when the light switch is "off", I see a white light bulb.
