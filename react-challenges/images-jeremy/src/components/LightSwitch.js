@@ -1,5 +1,5 @@
 // Light Bulb Challenge
-// As a user, I can see a square on the screen with the word off in the middle.
+    // As a user, I can see a square on the screen with the word off in the middle.
 // As a user, when I click the square the word toggle from "off" to "on" and then back "off" again.
 // As a user, when I click the box the color goes from white to yellow. The words "on" or "off" are still displayed in the box.
 // As a user, instead of seeing a box, I see a picture of a light switch in the "off" position.
@@ -24,11 +24,19 @@ class LightSwitch extends Component {
     }
   }
 
+  flipSwitch = () => {
+    var switchFlipped = this.state.switch;
+    {switchFlipped == "Off" ? 
+    this.setState({switch: "On"}): 
+    this.setState({switch: "Off"})
+    };
+    
+  }
   render() {
     return(
       <div className="container">
         <h1>LightSwitch.js</h1>
-        <div className="square">
+        <div className="square" onClick={this.flipSwitch}> 
           { 
           <div className="center-text">
             {this.state.switch}
