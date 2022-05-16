@@ -24,6 +24,7 @@ class LightSwitch extends Component {
     }
   }
 
+  // When square is clicked, flip switch on or off
   flipSwitch = () => {
     var switchFlipped = this.state.switch;
     {switchFlipped == "Off" ? 
@@ -36,7 +37,7 @@ class LightSwitch extends Component {
     return(
       <div className="container">
         <h1>LightSwitch.js</h1>
-        <div className="square" onClick={this.flipSwitch}> 
+        <div className="square" onClick={this.flipSwitch}> {/* onClick flip switch On or Off */}
           { 
           <div className="center-text">
             {this.state.switch}
