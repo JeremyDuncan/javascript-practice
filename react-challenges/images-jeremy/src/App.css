@@ -53,3 +53,10 @@
   text-align: center;
   margin-top: 130px;
 }
+.switch-off {
+  background-color: White;
+}
+.switch-on {
+  background-color: yellow;
+  color: Red;
+}
