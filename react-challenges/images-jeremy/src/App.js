@@ -28,7 +28,7 @@ class App extends Component {
   render() {
     return(
       <div>
-        <h1>START HERE</h1>
+        <h1>START HERE App.js</h1>
         <LightSwitch />
 
       </div>
