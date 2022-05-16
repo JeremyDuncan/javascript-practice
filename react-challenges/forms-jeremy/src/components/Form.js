@@ -109,7 +109,8 @@ class Form extends Component {
               onChange={ this.handleChange } 
             />
             <br/>
-             <input
+             <input 
+            className="shadow"
             type="submit"
             value="Submit Form"
             onClick={ this.handleSubmit }
