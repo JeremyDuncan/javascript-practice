@@ -15,6 +15,7 @@
 
 import './App.css';
 import React, { Component } from 'react'
+import LightBulb from './components/LightSwitch'
 
 class App extends Component {
   constructor(props) {
