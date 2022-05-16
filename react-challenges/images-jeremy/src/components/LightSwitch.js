@@ -14,13 +14,15 @@
 // As a user, when I click the Remove button I can delete a Light Switch with its accompanying Light Bulb.;
 
 import React, { Component } from 'react'
+import switchImage from './SwitchImages'
 
 class LightSwitch extends Component {
   constructor(props) {
     super(props)
     this.state = {
       switch: "Off",
-      light: "switch-off square"
+      light: "switch-off square",
+      image: switchImage
 
     }
   }
