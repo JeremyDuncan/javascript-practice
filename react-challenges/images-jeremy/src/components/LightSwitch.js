@@ -1,10 +1,10 @@
 // Light Bulb Challenge
     // As a user, I can see a square on the screen with the word off in the middle.
     // As a user, when I click the square the word toggle from "off" to "on" and then back "off" again.
-  // As a user, when I click the box the color goes from white to yellow. The words "on" or "off" are still displayed in the box.
-// As a user, instead of seeing a box, I see a picture of a light switch in the "off" position.
-// As a user, when I click on the light switch it turns "on".
-// As a user, when the light switch is "off", I see a white light bulb.
+    // As a user, when I click the box the color goes from white to yellow. The words "on" or "off" are still displayed in the box.
+    // As a user, instead of seeing a box, I see a picture of a light switch in the "off" position.
+    // As a user, when I click on the light switch it turns "on".
+    // As a user, when the light switch is "off", I see a white light bulb.
 // As a user, when I turn the switch "on", I see a yellow light bulb.
 // Stretch Challenge
 
@@ -21,34 +21,36 @@ class LightSwitch extends Component {
     super(props)
     this.state = {
       switch: "Off",
-      light: "switch-off square",
+      light: "switch-off light-bulb",
       image: switchImage
     }
   }
-  
+
   // When square is clicked, flip switch on or off
   flipSwitch = () => {
     var switchFlipped = this.state.switch;
     {switchFlipped == "Off" ? 
-    this.setState({switch: "On", light: "switch-on square"}): 
-    this.setState({switch: "Off", light: "switch-off square"})
+    this.setState({switch: "On", light: "switch-on light-bulb"}): 
+    this.setState({switch: "Off", light: "switch-off light-bulb"})
     };
     
   }
   render() {
     return(
-      <div className="container">
-        <h1>LightSwitch.js</h1>
-        <div className={this.state.light} onClick={this.flipSwitch}>{/* onClick flip switch On or Off */}
-        <img className="round" src={switchImage[this.state.switch]} width="100px" height="200px" />
-          { 
-          <div className="center-text">
-            {this.state.switch}
+      <div className="container App-header">
+          <div className={this.state.light}>
+            { 
+            <div className="center-text">
+              {this.state.switch}
+            </div>
+            }
           </div>
-          }
-        </div>
-
-
+          <div className="center">
+            {/* onClick flip switch On or Off */}
+            <img src={switchImage[this.state.switch]} 
+              onClick={this.flipSwitch} 
+              width="100px" height="200px"/>
+          </div>
       </div>
     )
   }
