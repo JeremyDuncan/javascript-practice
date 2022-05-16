@@ -23,10 +23,9 @@ class LightSwitch extends Component {
       switch: "Off",
       light: "switch-off square",
       image: switchImage
-
     }
   }
-
+  
   // When square is clicked, flip switch on or off
   flipSwitch = () => {
     var switchFlipped = this.state.switch;
@@ -40,7 +39,8 @@ class LightSwitch extends Component {
     return(
       <div className="container">
         <h1>LightSwitch.js</h1>
-        <div className={this.state.light} onClick={this.flipSwitch}> {/* onClick flip switch On or Off */}
+        <div className={this.state.light} onClick={this.flipSwitch}>{/* onClick flip switch On or Off */}
+        <img className="round" src={switchImage[this.state.switch]} width="100px" height="200px" />
           { 
           <div className="center-text">
             {this.state.switch}
