@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  margin-top: 425px;
+  margin-top: 195px;
 }
 .container {
   display: flex;
@@ -13,20 +13,38 @@
   font-size: calc(10px + 2vmin);
   gap: 5px;
 }
+.title {
+  border-radius: 15px;
+  background-color: #657186;
+  text-align: center;
+}
 .center {
   background-color: #657186;
   border-radius: 15px;
   display: flex;
   flex-direction: row;
   gap: 15px;
-  padding: 5px 5px 5px 5px;
+  padding: 15px 15px 25px 15px;
 }
 
 .left {
   background-color: #444c5b;
   border-radius: 15px;
+  padding: 15px 15px 25px 15px;
+  box-shadow: 4px 9px 8px 4px rgb(1, 1, 1);
 }
 .right {
   background-color: #444c5b;
   border-radius: 15px;
+  box-shadow: 4px 9px 8px 4px rgb(1, 1, 1);
+  height: 600px;
+}
+.shadow {
+  box-shadow: 2px 2px 8px rgb(1, 1, 1);
+}
+.text {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 250px;
 }
