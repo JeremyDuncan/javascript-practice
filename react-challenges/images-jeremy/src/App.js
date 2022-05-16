@@ -15,7 +15,7 @@
 
 import './App.css';
 import React, { Component } from 'react'
-import LightBulb from './components/LightSwitch'
+import LightSwitch from './components/LightSwitch'
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +29,7 @@ class App extends Component {
     return(
       <div>
         <h1>START HERE</h1>
+        <LightSwitch />
 
       </div>
     )
