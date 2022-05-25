@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/lightswitch-app/static/css/main.f973b853.css",
-    "main.js": "/lightswitch-app/static/js/main.072f89a3.js",
-    "static/js/787.d49b5104.chunk.js": "/lightswitch-app/static/js/787.d49b5104.chunk.js",
-    "static/media/switch-on.png": "/lightswitch-app/static/media/switch-on.feb4e3d37370cdf72a32.png",
-    "static/media/switch-off.png": "/lightswitch-app/static/media/switch-off.a01fc0306cd707e0f149.png",
-    "index.html": "/lightswitch-app/index.html",
-    "main.f973b853.css.map": "/lightswitch-app/static/css/main.f973b853.css.map",
-    "main.072f89a3.js.map": "/lightswitch-app/static/js/main.072f89a3.js.map",
-    "787.d49b5104.chunk.js.map": "/lightswitch-app/static/js/787.d49b5104.chunk.js.map"
+    "main.css": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/css/main.f973b853.css",
+    "main.js": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/js/main.e6d647da.js",
+    "static/js/787.d49b5104.chunk.js": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/js/787.d49b5104.chunk.js",
+    "static/media/switch-on.png": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/media/switch-on.feb4e3d37370cdf72a32.png",
+    "static/media/switch-off.png": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/media/switch-off.a01fc0306cd707e0f149.png",
+    "index.html": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/index.html",
+    "main.f973b853.css.map": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/css/main.f973b853.css.map",
+    "main.e6d647da.js.map": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/js/main.e6d647da.js.map",
+    "787.d49b5104.chunk.js.map": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/js/787.d49b5104.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f973b853.css",
-    "static/js/main.072f89a3.js"
+    "static/js/main.e6d647da.js"
   ]
 }
