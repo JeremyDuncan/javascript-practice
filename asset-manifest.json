@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/css/main.f973b853.css",
-    "main.js": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/js/main.e6d647da.js",
-    "static/js/787.d49b5104.chunk.js": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/js/787.d49b5104.chunk.js",
-    "static/media/switch-on.png": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/media/switch-on.feb4e3d37370cdf72a32.png",
-    "static/media/switch-off.png": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/media/switch-off.a01fc0306cd707e0f149.png",
-    "index.html": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/index.html",
-    "main.f973b853.css.map": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/css/main.f973b853.css.map",
-    "main.e6d647da.js.map": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/js/main.e6d647da.js.map",
-    "787.d49b5104.chunk.js.map": "/JeremyDuncan/javascript-practice/tree/main/react-challenges/images-jeremy/static/js/787.d49b5104.chunk.js.map"
+    "main.css": "/JeremyDuncan/javascript-practice/static/css/main.f973b853.css",
+    "main.js": "/JeremyDuncan/javascript-practice/static/js/main.e0c4b4a2.js",
+    "static/js/787.d49b5104.chunk.js": "/JeremyDuncan/javascript-practice/static/js/787.d49b5104.chunk.js",
+    "static/media/switch-on.png": "/JeremyDuncan/javascript-practice/static/media/switch-on.feb4e3d37370cdf72a32.png",
+    "static/media/switch-off.png": "/JeremyDuncan/javascript-practice/static/media/switch-off.a01fc0306cd707e0f149.png",
+    "index.html": "/JeremyDuncan/javascript-practice/index.html",
+    "main.f973b853.css.map": "/JeremyDuncan/javascript-practice/static/css/main.f973b853.css.map",
+    "main.e0c4b4a2.js.map": "/JeremyDuncan/javascript-practice/static/js/main.e0c4b4a2.js.map",
+    "787.d49b5104.chunk.js.map": "/JeremyDuncan/javascript-practice/static/js/787.d49b5104.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f973b853.css",
-    "static/js/main.e6d647da.js"
+    "static/js/main.e0c4b4a2.js"
   ]
 }
