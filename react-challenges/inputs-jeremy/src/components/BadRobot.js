@@ -16,9 +16,16 @@ class BadRobot extends Component {
     }
 
     return (
-      <div>
-        <h1>BAD ROBOT:</h1>
-        <h2>I hear you say {blah}? Is that correct?</h2>
+      <div className="module-container">
+        <div>
+          <img className="robot-img" src={require("../images/bad_robot.webp")} />
+        </div>
+        <div className="robot-title">
+          <h1>BAD ROBOT:</h1>
+        </div>
+        <div className="robot-speach">
+          <h2>I hear you say {blah}? Is that correct?</h2>
+        </div>
       </div>
     );
   }
