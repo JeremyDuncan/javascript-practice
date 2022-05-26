@@ -2,16 +2,30 @@
   text-align: center;
 }
 
+body {
+  background-color: rgb(95, 142, 143);
+}
 .App-header {
   background-color: #282c34;
+  width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  border: 9px solid rgb(52, 166, 186);
+
 }
+.text-box {
+  height: 30px;
+  width: 400px;
+  margin: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px 4px black;
+  border: 3px solid rgb(52, 166, 186);
+}
+
 .module-container {
   display: flex;
   flex-direction: row;
@@ -22,8 +36,7 @@
   border: 9px solid rgb(52, 166, 186);
   background-color: #3e4656;
   box-shadow: 2px 2px 8px 9px black;
-
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   color: rgb(70, 154, 92);
 }
@@ -31,19 +44,59 @@
   width: 300px;
   display: flex;
   border-radius: 25px;
-
-
-  border: 9px solid red;
 }
 .robot-title {
   display: flex;
   font-size: 26px;
-  border: 9px solid red;
 }
 
 .robot-speach {
   display: flex;
-  border: 9px solid red;
   font-size: 20px;
+}
 
+
+@media (max-width: 1200px) {
+  .module-container {
+    gap: 35px;
+  }
+  .robot-img {
+    width: 210px;
+  }
+  .robot-title {
+    font-size: 15px;
+  }
+  .robot-speach {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+  .module-container {
+    gap: 20px;
+  }
+  .robot-img {
+    width: 150px;
+  }
+  .robot-title {
+    font-size: 15px;
+  }
+  .robot-speach {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .module-container {
+    gap: 5px;
+  }
+  .robot-img {
+    width: 110px;
+  }
+  .robot-title {
+    font-size: 8px;
+  }
+  .robot-speach {
+    font-size: 8px;
+  }
 }

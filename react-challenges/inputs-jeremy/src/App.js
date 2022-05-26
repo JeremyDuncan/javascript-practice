@@ -37,11 +37,13 @@ class App extends Component {
 
   render(){
     return(
-      <div className="App App-header">
+      <div className="App">
         
           {/*// User input box*/}
-          <input type="text" value={this.state.userInput} onChange={this.handleChange}/>
-
+          <div>
+            <p><strong>Say Something to the robots...</strong></p>
+            <input className="text-box" type="text" value={this.state.userInput} onChange={this.handleChange}/>
+          </div>
           <GoodRobot userInput={this.state.userInput}/>
           <br/>
           <BadRobot userInput={this.state.userInput}/>
