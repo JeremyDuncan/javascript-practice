@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/forms-jeremy/static/css/main.a3488a8a.css",
+    "main.js": "/forms-jeremy/static/js/main.975ef44f.js",
+    "static/js/787.9014def9.chunk.js": "/forms-jeremy/static/js/787.9014def9.chunk.js",
+    "index.html": "/forms-jeremy/index.html",
+    "main.a3488a8a.css.map": "/forms-jeremy/static/css/main.a3488a8a.css.map",
+    "main.975ef44f.js.map": "/forms-jeremy/static/js/main.975ef44f.js.map",
+    "787.9014def9.chunk.js.map": "/forms-jeremy/static/js/787.9014def9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3488a8a.css",
+    "static/js/main.975ef44f.js"
+  ]
+}
