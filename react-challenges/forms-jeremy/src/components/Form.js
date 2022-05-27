@@ -9,117 +9,165 @@
 // As a user, after I have filled out the text inputs I can click a 'Submit' button.
 // As a user, when I click 'Submit' I see a paragraph appear on the page that contains the words I entered in the text forms to create a funny story.
 
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class Form extends Component {
   constructor(props) {
-    super(props) 
+    super(props);
     this.state = {
       form: {
-        noun1: "", 
+        noun1: "",
         noun2: "",
         noun3: "",
         noun4: "",
         verb1: "",
         verb2: "",
         adjective1: "",
-        adjective2: ""
-      }
-    }
+        adjective2: "",
+      },
+    };
   }
 
   handleChange = (e) => {
-    const { form } = this.state
-    form[e.target.name] = e.target.value
-    this.setState({ form: form})
-  }
+    const { form } = this.state;
+    form[e.target.name] = e.target.value;
+    this.setState({ form: form });
+  };
 
   handleSubmit = (e) => {
-    e.preventDefault() // Prevent page refresh after submit
-    this.props.handleFormSubmit(this.state.form); 
-   }
+    e.preventDefault(); // Prevent page refresh after submit
+    this.props.handleFormSubmit(this.state.form);
+  };
 
-  render(){
-    return(
+  render() {
+    return (
       <div>
-
         <React.Fragment>
           <form>
-            <label>Noun</label>
-            <input  
-              type="text" 
-              name="noun1"
-              value={this.state.form.noun1}
-              onChange={ this.handleChange }
+            <div className="input-container">
+              <div className="form-label">
+                <label>Noun</label>
+              </div>
+              <div className="form-input">
+                <input
+                  type="text"
+                  name="noun1"
+                  value={this.state.form.noun1}
+                  onChange={this.handleChange}
+                />
+              </div>
+            </div>
+            <br />
+            <div className="input-container">
+              <div className="form-label">
+                <label>Noun</label>
+              </div>
+              <div className="form-input">
+                <input
+                  type="text"
+                  name="noun2"
+                  value={this.state.form.noun2}
+                  onChange={this.handleChange}
+                />
+              </div>
+            </div>
+            <br />
+            <div className="input-container">
+              <div className="form-label">
+                <label>Noun</label>
+              </div>
+              <div className="form-input">
+                <input
+                  type="text"
+                  name="noun3"
+                  value={this.state.form.noun3}
+                  onChange={this.handleChange}
+                />
+              </div>
+            </div>
+            <br />
+            <div className="input-container">
+              <div className="form-label">
+                <label>Noun</label>
+              </div>
+              <div className="form-input">
+                <input
+                  type="text"
+                  name="noun4"
+                  value={this.state.form.noun4}
+                  onChange={this.handleChange}
+                />
+              </div>
+            </div>
+            <br />
+            <div className="input-container">
+              <div className="form-label">
+                <label>Verb</label>
+              </div>
+              <div className="form-input">
+                <input
+                  type="text"
+                  name="verb1"
+                  value={this.state.form.verb1}
+                  onChange={this.handleChange}
+                />
+              </div>
+            </div>
+            <br />
+            <div className="input-container">
+              <div className="form-label">
+                <label>Verb</label>
+              </div>
+              <div className="form-input">
+                <input
+                  type="text"
+                  name="verb2"
+                  value={this.state.form.verb2}
+                  onChange={this.handleChange}
+                />
+              </div>
+            </div>
+            <br />
+            <div className="input-container">
+              <div className="form-label">
+                <label>Adjective</label>
+              </div>
+              <div className="form-input">
+                <input
+                  type="text"
+                  name="adjective1"
+                  value={this.state.form.adjective1}
+                  onChange={this.handleChange}
+                />
+              </div>
+            </div>
+            <br />
+            <div className="input-container">
+              <div className="form-label">
+                <label>Adjective</label>
+              </div>
+              <div className="form-input">
+                <input
+                  type="text"
+                  name="adjective2"
+                  value={this.state.form.adjective2}
+                  onChange={this.handleChange}
+                />
+              </div>
+            </div>
+
+            <br />
+            <input
+              className="shadow"
+              type="submit"
+              value="Submit Form"
+              onClick={this.handleSubmit}
+              onChange={this.handleChange}
             />
-            <br/>
-            <label>Noun</label>
-            <input 
-              type="text" 
-              name="noun2"
-              value={this.state.form.noun2}
-              onChange={ this.handleChange } 
-            />
-            <br/>
-            <label>Noun</label>
-            <input 
-              type="text" 
-              name="noun3"
-              value={this.state.form.noun3}
-              onChange={ this.handleChange } 
-            />
-            <br/>
-            <label>Noun</label>
-            <input 
-              type="text"
-              name="noun4" 
-              value={this.state.form.noun4}
-              onChange={ this.handleChange } 
-            />
-            <br/>
-            <label>Verb</label>
-            <input 
-              type="text"
-              name="verb1" 
-              value={this.state.form.verb1}
-              onChange={ this.handleChange } 
-            />
-            <br/>
-            <label>Verb</label>
-            <input 
-              type="text"
-              name="verb2" 
-              value={this.state.form.verb2} 
-              onChange={ this.handleChange }
-            />
-            <br/>
-            <label>Adjective</label>
-            <input 
-              type="text" 
-              name="adjective1"
-              value={this.state.form.adjective1}
-              onChange={ this.handleChange } 
-            />
-            <br/>
-            <label>Adjective</label>
-            <input 
-              type="text"
-              name="adjective2" 
-              value={this.state.form.adjective2}
-              onChange={ this.handleChange } 
-            />
-            <br/>
-             <input 
-            className="shadow"
-            type="submit"
-            value="Submit Form"
-            onClick={ this.handleSubmit }
-            onChange={ this.handleChange }
-          />
           </form>
         </React.Fragment>
       </div>
-    )
+    );
   }
 }
 

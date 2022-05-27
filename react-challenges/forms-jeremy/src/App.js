@@ -61,7 +61,7 @@ class App extends Component {
                     </p>
                   </div>
                   <div className="App">
-                    <button className="shadow" onClick={() => window.location.reload()}>Clear</button>
+                    <button className="shadow butt" onClick={() => window.location.reload()}>Clear</button>
                   </div>
                 </div>
                 }
