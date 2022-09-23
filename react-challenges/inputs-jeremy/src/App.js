@@ -15,43 +15,47 @@
 // As a developer, I can create modification to the user input text by creating a method in my child component.
 // As a user, I see a third robot that is the developer's choice.
 
-
-import './App.css';
-import React, { Component } from 'react'
-import GoodRobot from './components/GoodRobot'
-import BadRobot from './components/BadRobot'
-import KanyeRobot from './components/KanyeRobot'
+import React, { Component } from "react";
+import "./App.css";
+import BadRobot from "./components/BadRobot";
+import GoodRobot from "./components/GoodRobot";
+import KanyeRobot from "./components/KanyeRobot";
 
 class App extends Component {
   constructor(props) {
-    super(props) 
+    super(props);
     this.state = {
-      userInput: "awesome"
-    }
+      userInput: "Hello",
+    };
   }
 
   handleChange = (e) => {
-    console.log(e.target.value)
-    this.setState({userInput: e.target.value})
-  }
+    console.log(e.target.value);
+    this.setState({ userInput: e.target.value });
+  };
 
-  render(){
-    return(
+  render() {
+    return (
       <div className="App">
-        
-          {/*// User input box*/}
-          <div>
-            <p><strong>Say Something to the robots...</strong></p>
-            <input className="text-box" type="text" value={this.state.userInput} onChange={this.handleChange}/>
-          </div>
-          <GoodRobot userInput={this.state.userInput}/>
-          <br/>
-          <BadRobot userInput={this.state.userInput}/>
-          <br/>
-          <KanyeRobot userInput={this.state.userInput}/>
-
+        {/*// User input box*/}
+        <div>
+          <p>
+            <strong>Say Something to the robots...</strong>
+          </p>
+          <input
+            className="text-box"
+            type="text"
+            value={this.state.userInput}
+            onChange={this.handleChange}
+          />
+        </div>
+        <GoodRobot userInput={this.state.userInput} />
+        <br />
+        <BadRobot userInput={this.state.userInput} />
+        <br />
+        <KanyeRobot userInput={this.state.userInput} />
       </div>
-    )
+    );
   }
 }
 
